@@ -1,0 +1,14 @@
+Package: sbformula
+Type: Package
+Title: Formulas for crop breeding and standart evaluation trial
+Version: 1.0
+Date: 2015-03-24
+Author: Omar Benites
+Maintainer: Omar Benites <obacc07@gmail.com>
+Description: The package provides a set of formulas for plant breeding trials.
+  All these formulas belong to procedures for standard evaluation and data management trials at 
+  International Potato Center.
+Imports: doBy  
+License: MIT + file LICENSE
+Copyright: International Potato Center (2015)
+LazyData: true
