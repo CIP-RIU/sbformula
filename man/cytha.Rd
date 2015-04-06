@@ -25,9 +25,11 @@ Omar Benites
 }
 \seealso{
 Other sweetpotato,quality,harvest: \code{\link{acrw}};
-  \code{\link{biom}}; \code{\link{ci}}; \code{\link{hi}};
-  \code{\link{nrpp}}; \code{\link{rytha}};
-  \code{\link{trw}}; \code{\link{ypp}}
+  \code{\link{biom}}; \code{\link{ci}}; \code{\link{dmfy}};
+  \code{\link{dmry}}; \code{\link{dm}};
+  \code{\link{fytha}}; \code{\link{hi}};
+  \code{\link{nrpp}}; \code{\link{rfr}};
+  \code{\link{rytha}}; \code{\link{trw}}; \code{\link{ypp}}
 }
 \keyword{agronomy,harvest,quantitative-continuous,yield,}
 \keyword{sweetpotato,}

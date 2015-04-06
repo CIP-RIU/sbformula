@@ -12,7 +12,7 @@
 #'@family sweetpotato,quality,harvest
 #'@export 
 #'  
-dmry <- function(crw,ncrw,pls,dmry,dmd,dmf){
+dmry <- function(crw,ncrw,pls,dmd,dmf){
   
   if(missing(pls)){
   stop("Please enter the net plot size 'pls'")
