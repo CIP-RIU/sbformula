@@ -4,14 +4,14 @@
 \alias{sbmean}
 \title{Function to calculate the summary by mean for breeding data}
 \usage{
-sbmean(data = NULL, idx, groupvars = NULL, na.rm = FALSE)
+sbmean(data = NULL, idx, groupfactors = NULL, na.rm = FALSE)
 }
 \arguments{
 \item{data}{A data frame}
 
 \item{idx}{The name or position of the measured variable that will be summarized.}
 
-\item{groupvars}{A vector containing names of columns that contain grouping variables}
+\item{groupfactors}{A vector containing names of columns that contain grouping variables}
 
 \item{na.rm}{A boolean that indicates whether to ignore NA's}
 }

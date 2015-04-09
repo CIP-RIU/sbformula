@@ -2,7 +2,7 @@
 #'
 #'@param data A data frame
 #'@param idx The name or position of the measured variable that will be summarized.
-#'@param groupvars A vector containing names of columns that contain grouping variables
+#'@param groupfactors A vector containing names of columns that contain grouping variables
 #'@param na.rm A boolean that indicates whether to ignore NA's
 #'@return A data frame with the count, mean and standard desviation
 #'@author Omar Benites
@@ -13,20 +13,16 @@
 #'@family stats,summary
 #'@export 
 #' 
-sbsummary<- function(data=NULL,idx, groupvars=NULL, na.rm=FALSE) {
+sbsummary<- function(data=NULL,idx, groupfactors=NULL, na.rm=FALSE) {
   #require(doBy)
   # New version of length which can handle NA's: if na.rm==T, don't count them
   if(missing(data)){
     stop("Please enter your data")
   }
-  if(!is.data.frame(data)){
-    stop("data must be a data frame")
-  }
-  
   if(missing(idx)){
     stop("Please enter the name or position of the measured variable")
   }
-  if(missing(groupvars)){
+  if(missing(groupfactors)){
     stop("Please enter the name of columns that contain grouping variables")
   }
   length2 <- function (x, na.rm=FALSE) {
@@ -40,7 +36,7 @@ sbsummary<- function(data=NULL,idx, groupvars=NULL, na.rm=FALSE) {
   measurevar <- lbl
 
   # Collapse the data
-  formula <- as.formula(paste(measurevar, paste(groupvars, collapse=" + "), sep=" ~ "))
+  formula <- as.formula(paste(measurevar, paste(groupfactors, collapse=" + "), sep=" ~ "))
   datac <- doBy::summaryBy(formula, data=data, FUN=c(length2,mean,sd), na.rm=na.rm)
   
   # Rename columns

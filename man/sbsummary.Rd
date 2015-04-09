@@ -4,14 +4,14 @@
 \alias{sbsummary}
 \title{Function to calculate summary statistics for breeding data}
 \usage{
-sbsummary(data = NULL, idx, groupvars = NULL, na.rm = FALSE)
+sbsummary(data = NULL, idx, groupfactors = NULL, na.rm = FALSE)
 }
 \arguments{
 \item{data}{A data frame}
 
 \item{idx}{The name or position of the measured variable that will be summarized.}
 
-\item{groupvars}{A vector containing names of columns that contain grouping variables}
+\item{groupfactors}{A vector containing names of columns that contain grouping variables}
 
 \item{na.rm}{A boolean that indicates whether to ignore NA's}
 }
