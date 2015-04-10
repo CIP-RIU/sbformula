@@ -10,7 +10,7 @@
 #'of potato (Solanum tuberosum L.)
 #'@keywords index, drought
 #'@family index
-#'@export 
+#'@export
 
 #DSI <- function(dfmeans,clabel=NA, slabel=NA)
 DSI.means<- function(ylmeans,clabel=NA, slabel=NA)
