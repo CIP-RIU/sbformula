@@ -9,7 +9,7 @@ install.packages(devtools)
 ```
 Then type:
 ```{r eval=F}
-devtools::install_github("reyzaguirre/rhep")
+devtools::install_github("omarbenites/sbformula")
 ```
 
 ### Usage
