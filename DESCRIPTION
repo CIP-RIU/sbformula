@@ -9,7 +9,9 @@ Description: Formulas for plant breeding trials.
   All these formulas belong to procedures for standard evaluation and data management trials at 
   International Potato Center.
 Depends: R (>= 3.1.2)
-Imports: doBy
+Imports: doBy,
+         stringr,
+         date
 License: MIT + file LICENSE
 Copyright: International Potato Center (2015)
 LazyData: true
