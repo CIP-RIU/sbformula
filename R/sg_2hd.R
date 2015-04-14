@@ -20,7 +20,7 @@ sg_2hd  <- function(sgs1_2hd,sgs2_2hd){
     stop("Please enter the specific gravity sample 2 'sgs2_2hd'")
   }
   
-  sg_2hd <- apply(cbind(sgs1_2hd,sgs2_2hd),1,mean, na.rm=t)
+  sg_2hd <- apply(cbind(sgs1_2hd,sgs2_2hd),1,mean, na.rm=TRUE)
   return(sg_2hd)
 }
 
