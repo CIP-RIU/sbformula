@@ -23,4 +23,3 @@ atmw_2hd <- function(mtwp_2hd,nmtp_2hd){
  atmw_2hd  <-  (mtwp_2hd/nmtp_2hd)*1000
   return(atmw_2hd)
 }
-  
