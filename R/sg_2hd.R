@@ -22,4 +22,5 @@ sg_2hd  <- function(sgs1_2hd,sgs2_2hd){
   
   sg_2hd <- apply(cbind(sgs1_2hd,sgs2_2hd),1,mean, na.rm=t)
   return(sg_2hd)
-} 
+}
+
