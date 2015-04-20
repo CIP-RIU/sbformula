@@ -1,0 +1,58 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+summary(cars)
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+```{r, echo=FALSE}
+df <- data.frame(
+  id = 1:10,
+  name = c("Bob", "Ashley", "James", "David", "Jenny", 
+    "Hans", "Leo", "John", "Emily", "Lee"), 
+  age = c(28, 27, 30, 28, 29, 29, 27, 27, 31, 30),
+  grade = c("C", "A", "A", "C", "B", "B", "B", "A", "C", "C"),
+  test1_score = c(8.9, 9.5, 9.6, 8.9, 9.1, 9.3, 9.3, 9.9, 8.5, 8.6),
+  test2_score = c(9.1, 9.1, 9.2, 9.1, 8.9, 8.5, 9.2, 9.3, 9.1, 8.8),
+  final_score = c(9, 9.3, 9.4, 9, 9, 8.9, 9.25, 9.6, 8.8, 8.7),
+  registered = c(TRUE, FALSE, TRUE, FALSE, TRUE, TRUE, TRUE, FALSE, FALSE, FALSE),
+  stringsAsFactors = FALSE)
+
+library(formattable)
+score_colorizer <- formatter("span", 
+  style = function(x) style(
+    display = "block", 
+    color = "white", 
+    "border-radius" = "4px",
+    "padding-right" = "4px",
+    background = rgb(0.2 + 0.8 * rank(-x) / length(x), 0.6, 0)))
+
+formattable(df, list(
+  grade = formatter("span",
+    style = function(x) 
+      ifelse(x == "A", style(color = "green", "font-weight" = "bold"), NA)),
+  test1_score = score_colorizer,
+  test2_score = score_colorizer,
+  final_score = formatter("span",
+    style = function(x) style(color = ifelse(rank(-x) <= 3, "green", "gray")),
+    function(x) sprintf("%.2f (ranking %02d)", x, rank(-x))),
+  registered = function(x) ifelse(x, "yes", "no")
+))
+
+
+```
