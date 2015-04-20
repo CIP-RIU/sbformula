@@ -1,3 +1,5 @@
+[![Travis-CI Build Status](https://travis-ci.org/omarbenites/sbformula.png?branch=master)](https://travis-ci.org/omarbenites/sbformula)
+
 # sbformula
 The package provides a set of formulas for plant breeding trials. All these formulas belong to procedures for standard evaluation and data management trials at    International Potato Center.
 
