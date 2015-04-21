@@ -7,7 +7,7 @@
 #'@details Formula for calculating the average commercial root weight
 #'@keywords sweetpotato, agronomy,harvest,quantitative-continuous,yield
 #'@family sweetpotato,quality,harvest
-#'@export 
+#'@export   
 #' 
 acrw <- function(crw,nocr){
         
