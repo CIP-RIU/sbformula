@@ -15,5 +15,6 @@ Imports: doBy,
 License: MIT + file LICENSE
 Copyright: International Potato Center (2015)
 LazyData: true
-Suggests: knitr
+Suggests: knitr,
+    testthat
 VignetteBuilder: knitr
