@@ -2,6 +2,7 @@
 
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/omarbenites/sbformula?branch=master)](https://ci.appveyor.com/project/omarbenites/sbformula)
 
+[![Coverage Status](https://img.shields.io/coveralls/omarbenites/sbformula.svg)](https://coveralls.io/r/omarbenites/sbformula?branch=master)
 
 # sbformula
 The package provides a set of formulas for plant breeding trials. All these formulas belong to procedures for standard evaluation and data management trials at    International Potato Center.
