@@ -2,7 +2,7 @@
 % Please edit documentation in R/INRWC2.R
 \name{INRWC2}
 \alias{INRWC2}
-\title{Function for calculating Increase Relative Water Content 2  (INRWC2)}
+\title{Function for calculating Increase Relative Water Content 2 (INRWC2)}
 \usage{
 INRWC2(RWC_EV2, RWC_EV3)
 }
@@ -15,7 +15,7 @@ INRWC2(RWC_EV2, RWC_EV3)
 Return the Increase Relative Water Content 2 (INRWC2)
 }
 \description{
-Function for calculating Increase Relative Water Content 2  (INRWC2)
+Function for calculating Increase Relative Water Content 2 (INRWC2)
 }
 \details{
 This function calculates the Increase Relative Water Content 2 (INRWC2)
