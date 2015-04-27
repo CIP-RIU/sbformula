@@ -11,7 +11,8 @@ Description: Formulas for plant breeding trials.
 Depends: R (>= 3.0.2)
 Imports: doBy,
          stringr,
-         date
+         date,
+         car
 License: MIT + file LICENSE
 Copyright: International Potato Center (2015)
 LazyData: true
