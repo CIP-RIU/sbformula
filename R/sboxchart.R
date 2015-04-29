@@ -13,6 +13,10 @@
 #'@family boxplot,summary,outliers
 #'@export  
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5448ff804cea7175b72e444c95c2a7d4027a435a
 sboxcharts <- function(data,trait=NA,genotipes=NULL,factors=NULL,full_name=NULL,units=NULL){
   
   geno <- as.character(genotipes)
@@ -36,6 +40,11 @@ sboxcharts <- function(data,trait=NA,genotipes=NULL,factors=NULL,full_name=NULL,
     stop("Your variable name is not in the dataset")
   }
   
+<<<<<<< HEAD
+=======
+  
+  
+>>>>>>> 5448ff804cea7175b72e444c95c2a7d4027a435a
   #datos <- datos[,trait]
   
   #fc = file.path(getwd(),"temp","charts")
