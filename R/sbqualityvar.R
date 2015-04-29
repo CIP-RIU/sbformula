@@ -4,7 +4,7 @@
 #'@param genotipes The genotipes column name
 #'@param trait The trait column name
 #'@param lfactor The factor column name
-#'@param lfactor datadict The data frame of the data dictionary
+#'@param datadict The data frame of the data dictionary
 #'@return Return the values which are out of range using a data diccionary.
 #'@details This function return the values which are out of range. It use a data dicctionary to define the lower limit
 #'and the upper limit for a quality control.
