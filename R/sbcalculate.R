@@ -72,7 +72,7 @@ sfbcalculate <- function(fb){
   
   ###BEGIN TTWP  
   if(length(fb$MTWP)>0 & length(fb$NoMTWP)>0 ) fb=within(fb,{ 
-    TTWP <- sbformula::ttwp(mtwp= MTWP,nomtwp = NoMTWP) #in this case we consider mtcwi=MTWP, especial case
+    TTWP <- sbformula::ttwp(mtwp= MTWP,nomtwp = NoMTWP) 
   })
   
   if(length(fb$MTWCI)>0 & length(fb$MTWCII)>0) fb=within(fb,{   
@@ -246,12 +246,10 @@ sfbcalculate <- function(fb){
   #fieldbook[,fbn] # make sure not any variables were attached
 }
 
-
-
 # fp <- file.choose()
 # fp <- "C:\\Users\\fanny\\Desktop\\PTDT201409_STRSIGUAS_VHT.xlsx"
 # datos <- xlsx::read.xlsx(fp,"Fieldbook")
 # 
 # 
-# plot.size <- 15
-# plant.den <- 14
+ plot.size <- 15
+ plant.den <- 14

@@ -18,5 +18,5 @@ nmtpl <- function(nmtp,nph){
        stop("Please enter Number of plants harvested 'nph'")
      }
      nmtpl <- nmtp/nph
-     return(tntpl)
+     return(nmtpl)
 } 

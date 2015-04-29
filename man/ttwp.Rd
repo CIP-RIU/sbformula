@@ -4,12 +4,14 @@
 \alias{ttwp}
 \title{Formula for Total Tuber Weight/Plot (TTWP)}
 \usage{
-ttwp(mtwci, mtwcii, nomtwp)
+ttwp(mtwci, mtwcii, mtwp, nomtwp)
 }
 \arguments{
 \item{mtwci}{Marketable tuber weight category I/plot}
 
 \item{mtwcii}{Marketable tuber weight category II/plot}
+
+\item{mtwp}{Markeable tuber weight/plot}
 
 \item{nomtwp}{Non-marketable tuber weight/plot}
 }
