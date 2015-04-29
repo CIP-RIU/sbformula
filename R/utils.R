@@ -14,6 +14,17 @@ remove_na_rows <- function(datos){
   return(datos)
 }
 
+#'This function allows sum columns and avoid NA values at the same time
+#'
+#'@param x vector of measurements
+#'@return A vector contains sum of values that avoid NA's
+#'@keywords sum, NA's
+#'
+sbsum <- function(x){
+  z <- x[!is.na(x)]; 
+  ifelse(length(z), sum(z), NA)
+} 
+
 # get.data.dict = function(terms="all",sheetName="any"){
 #   #fp = file.path(getwd(),"res","data_dictionary_yield.xls")
 #   dic=getResourceData("dictionary","Variables")

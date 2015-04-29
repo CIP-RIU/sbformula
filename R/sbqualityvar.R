@@ -10,6 +10,7 @@
 #'and the upper limit for a quality control.
 #'@author Omar Benites
 #'@export
+#'
 sb_qualityvar <- function(data,genotipes,trait,lfactor=NULL,datadict){
   
   datos<-data

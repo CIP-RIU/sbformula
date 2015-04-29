@@ -1,14 +1,3 @@
-#'This function allows sum columns and avoid NA values at the same time
-#'
-#'@param x vector of measurements
-#'@return A vector contains sum of values that avoid NA's
-#'@keywords sum, NA's
-#'
-sbsum <- function(x){
-  z <- x[!is.na(x)]; 
-  ifelse(length(z), sum(z), NA)
-} 
-
 #'Formula for calculating the Total Number of Tubers/Plot (TNTP)
 #'
 #'@param nmtp Number marketable tubers/plot

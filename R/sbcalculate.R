@@ -72,7 +72,7 @@ sfbcalculate <- function(fb){
   
   ###BEGIN TTWP  
   if(length(fb$MTWP)>0 & length(fb$NoMTWP)>0 ) fb=within(fb,{ 
-    TTWP <- sbformula::ttwp(MTWP,nomtwp = NoMTWP) #in this case we consider mtcwi=MTWP, especial case
+    TTWP <- sbformula::ttwp(mtwp= MTWP,nomtwp = NoMTWP) #in this case we consider mtcwi=MTWP, especial case
   })
   
   if(length(fb$MTWCI)>0 & length(fb$MTWCII)>0) fb=within(fb,{   
