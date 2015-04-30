@@ -13,7 +13,8 @@ Imports: doBy,
          stringr,
          date,
          dplyr,
-         car
+         car,
+         xlsx
 License: MIT + file LICENSE
 Copyright: International Potato Center (2015)
 LazyData: true

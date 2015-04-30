@@ -19,6 +19,7 @@ remove_na_rows <- function(datos){
 #'@param x vector of measurements
 #'@return A vector contains sum of values that avoid NA's
 #'@keywords sum, NA's
+#'@export
 #'
 sbsum <- function(x){
   z <- x[!is.na(x)]; 
