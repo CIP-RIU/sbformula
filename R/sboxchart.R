@@ -16,6 +16,7 @@
 
 sboxcharts <- function(data,trait=NA,genotipes=NULL,factors=NULL,full_name=NULL,units=NULL){
   
+  datos <- data
   geno <- as.character(genotipes)
   trait <- as.character(trait)
   
