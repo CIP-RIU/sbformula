@@ -80,20 +80,21 @@ sboxcharts <- function(data,trait=NA,genotipes=NULL,factors=NULL,full_name=NULL,
         #datos %>% dplyr::select(.,locality,replication) %>% dplyr::filter(.,replication %in% c(3))          
       }
     
-    } else {
-      #	x = as.integer(as.character(data[,i]))
-      xx = sort(table(datos[,trait]))
-      cex = 1
-      if(length(xx)>30) cex=0.7
-      # 			fr= table(x)
-      # 			xx = cbind(as.integer(names(fr)), as.numeric(fr))
-      # 			rownames(xx) = xx[,1]
-      # 			xx = xx[,-1]
-      
-      #desc = dict[dict$ABBR==nmd,"DESC"]
-      
-      dotchart(xx, main="Dotchart for",sub=full_name, xlab="Frequency [absolute]", ylab=units, cex=cex)
-    }
+     } 
+#else {
+#       #	x = as.integer(as.character(data[,i]))
+#       xx = sort(table(datos[,trait]))
+#       cex = 1
+#       if(length(xx)>30) cex=0.7
+#       # 			fr= table(x)
+#       # 			xx = cbind(as.integer(names(fr)), as.numeric(fr))
+#       # 			rownames(xx) = xx[,1]
+#       # 			xx = xx[,-1]
+#       
+#       #desc = dict[dict$ABBR==nmd,"DESC"]
+#       
+#       dotchart(xx, main="Dotchart for",sub=full_name, xlab="Frequency [absolute]", ylab=units, cex=cex)
+#     }
     
     #devAskNewPage(ask=FALSE)
     #dev.off()
