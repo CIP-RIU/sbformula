@@ -35,8 +35,8 @@ sb_newqualityvar <- function(data,genotipes,trait,lfactor=NULL,ll,ul){
     select_fb <- dplyr::select_(datos,genotipes,xvar,lfactor) 
   }
   
-  out_rule <- datos[,xvar]>lowerl & datos[,xvar]<upperl #the good rule, so we denied with !
-  if(!any(out_rule)){ #If any value of 'out_rule' is true (ie. has outliers)
+  out_rule <- datos[,xvar]>=lowerl & datos[,xvar]<=upperl #the good rule, so we denied with !
+  if(any(out_rule)){ #If any value of 'out_rule' is true (ie. has outliers)
     
     out_pos <- rownames(datos[!out_rule,])
     out_values <- datos[out_pos,c(genotipes,xvar)]
