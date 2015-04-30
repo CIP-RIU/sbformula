@@ -10,8 +10,8 @@ shinyUI(fluidPage(
                  shiny::fileInput(inputId = "fb",label = "Upload your fieldbook"),
                  shiny::fileInput(inputId = "dict",label = "Upload your data dictionary"),
                  selectInput(inputId = "var",label = "Select the variable from iris dataset",
-                             choices = c("NPH","PPH",  "NMTP",	"MTWP",	"MTWPL"),selected="TNTP")
-                 
+                             choices = c( "NTP","NPH","PPH","TNTP","TNTPL","TTWP","TTWPL","TTYNA","TTYA","ATW","FWTS1","DWTS1","DM1","AVDM"),selected="TNTP")
+                                 
                  #                                   
                  #                  sliderInput(inputId = "bins",label = "2. Select the BINs for histogram",min = 5,max=25,value = 5),
                  #                  br(),
