@@ -21,17 +21,17 @@ sboxcharts <- function(data,trait=NA,genotipes=NULL,factors=NULL,full_name=NULL,
   trait <- as.character(trait)
   
   if(is.null(factors)){
-    datos <- datos[,c(geno,trait)]
+    datos <- data[,c(geno,trait)]
   }
     
   if(!is.null(factors)){
     
-    if(!(factor %in% names(datos))){
+    if(!(factors %in% names(data))){
       stop("Your factor name is not in the dataset")
     }
     
     lfactor <- factors
-    datos <-datos[,c(geno,lfactor,trait)] 
+    datos <-data[,c(geno,lfactor,trait)] 
   }
   
   if(!(trait %in% names(datos))){

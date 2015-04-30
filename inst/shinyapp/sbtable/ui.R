@@ -1,15 +1,16 @@
 library(shiny)
 shinyUI(fluidPage(
   #header of title panel
-  titlePanel(h4("Uso de los TabSets en shiny",align="center")),
+  titlePanel(h4("HIDAP-Data Quality",align="center")),
   
   sidebarLayout(
-    sidebarPanel("SidebarPanel para tabsets",
+    sidebarPanel("Data Quality on Potato Traits",
                  br(),
                  
                  shiny::fileInput(inputId = "fb",label = "Upload your fieldbook"),
+                 shiny::fileInput(inputId = "dict",label = "Upload your data dictionary"),
                  selectInput(inputId = "var",label = "Select the variable from iris dataset",
-                             choices = c("PPH",  "NMTP",	"MTWP",	"MTWPL"),selected="TNTP")
+                             choices = c("NPH","PPH",  "NMTP",	"MTWP",	"MTWPL"),selected="TNTP")
                  
                  #                                   
                  #                  sliderInput(inputId = "bins",label = "2. Select the BINs for histogram",min = 5,max=25,value = 5),
@@ -24,7 +25,8 @@ shinyUI(fluidPage(
                   tabPanel(title = "Summary",verbatimTextOutput("summary")),
                   tabPanel(title = "Structure",verbatimTextOutput("str")),
                   tabPanel(title = "Variable Selected", tableOutput("varcol")),
-                  tabPanel(title = "Summary by variable", tableOutput("sbsum"))
+                  tabPanel(title = "Summary by variable", tableOutput("sbsum")),
+                  tabPanel(title = "Boxplot Charts",  plotOutput("plot"))
                   #tabPanel(title = "Plot",plotOutput("myhist"))
                   
       )
