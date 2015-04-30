@@ -26,7 +26,7 @@ shinyUI(fluidPage(
                   tabPanel(title = "Structure",verbatimTextOutput("str")),
                   tabPanel(title = "Variable Selected", tableOutput("varcol")),
                   tabPanel(title = "Summary by variable", tableOutput("sbsum")),
-                  tabPanel(title = "Boxplot Charts",  plotOutput("plot"))
+                  tabPanel(title = "Out of Range Values",  tableOutput("oofr"))
                   #tabPanel(title = "Plot",plotOutput("myhist"))
                   
       )

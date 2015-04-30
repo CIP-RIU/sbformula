@@ -10,9 +10,9 @@ shinyServer(
     })
     
     ddict <- reactive({
-      file2 <- input$fb
+      file2 <- input$dict
       if(is.null(file2)){return()}
-      dict <- xlsx::read.xlsx(file = file2$datapath, 1, stringsAsFactors=FALSE)
+      dict <- xlsx::read.xlsx(file=file2$datapath,sheetIndex = 1,startRow = 6,stringsAsFactors=FALSE)
       
     })
     
@@ -37,6 +37,7 @@ shinyServer(
       p <- "FACTOR" %in% names(datos())
       print(names(datos()))
       print(p)
+      print(head(ddict()))
 #         str(datos())
       
     })
@@ -62,13 +63,10 @@ shinyServer(
     })
  
    output$oofr <- renderTable({
+    
      col <- as.character(input$var)
-     sbformula::sb_qualityvar(data = datos(),genotipes = "INSTN",trait = col,datadict = ddict())
-     
-     
-     sbformula::sb_qualityvar
-     
-     
+     a <- sbformula::sb_qualityvar(data = datos(),genotipes = "INSTN",trait = col,datadict = ddict())
+     out_of_range <- as.data.frame(a)
    })
  
  
