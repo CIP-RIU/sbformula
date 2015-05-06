@@ -15,25 +15,25 @@ outlier_colors<- function(file="mydata.xlsx",trait,sheetname="mysheet",ll,ul){
   trait <- as.character(trait)
   sheetname <- as.character(sheetname)
   filename <- as.character(file)
-  data <- read.xlsx(file=file,sheetName = sheetname,stringsAsFactors=FALSE)
+  data <- xlsx::read.xlsx(file=file,sheetName = sheetname,stringsAsFactors=FALSE)
   d <- data  
   pos <- which(names(d)==trait)
   cols<-length(d[1,])
   
-  wb <- loadWorkbook(file)              # load workbook
-  fo1 <- Fill(foregroundColor="blue")   # create fill object # 1
+  wb <- xlsx::loadWorkbook(file)              # load workbook
+  fo1 <- xlsx::Fill(foregroundColor="blue")   # create fill object # 1
   #fo1 <- Fill(foregroundColor="lightblue", backgroundColor="lightblue",pattern="SOLID_FOREGROUND")
-  cs1 <- CellStyle(wb, fill=fo1)        # create cell style # 1
-  fo2 <- Fill(foregroundColor="red")    # create fill object # 2
+  cs1 <- xlsx::CellStyle(wb, fill=fo1)        # create cell style # 1
+  fo2 <- xlsx::Fill(foregroundColor="red")    # create fill object # 2
   #fo2 <- Fill(foregroundColor="tomato", backgroundColor="tomato",pattern="SOLID_FOREGROUND")
-  cs2 <- CellStyle(wb, fill=fo2)        # create cell style # 2 
-  sheets <- getSheets(wb)               # get all sheets
+  cs2 <- xlsx::CellStyle(wb, fill=fo2)        # create cell style # 2 
+  sheets <- xlsx::getSheets(wb)               # get all sheets
   sheet <- sheets[[sheetname]]          # get specific sheet
-  rows <- getRows(sheet, rowIndex=2:(nrow(d)+1))     # get rows
+  rows <- xlsx::getRows(sheet, rowIndex=2:(nrow(d)+1))     # get rows
   # 1st row is headers
   #cells <- getCells(rows, colIndex = 4:cols)         # get cells
-  cells <- getCells(rows, colIndex = pos)         # get cells
-  values <- lapply(cells, getCellValue) # extract the cell values
+  cells <- xlsx::getCells(rows, colIndex = pos)         # get cells
+  values <- lapply(cells, xlsx::getCellValue) # extract the cell values
   
   highlightblue <- NULL
   for (i in names(values)) {
@@ -61,12 +61,12 @@ outlier_colors<- function(file="mydata.xlsx",trait,sheetname="mysheet",ll,ul){
   #Finally, apply the formatting and save the workbook.
   
   lapply(names(cells[highlightblue]),
-         function(ii)setCellStyle(cells[[ii]],cs1))
+         function(ii)xlsx::setCellStyle(cells[[ii]],cs1))
   
   lapply(names(cells[highlightred]),
-         function(ii)setCellStyle(cells[[ii]],cs2))
+         function(ii)xlsx::setCellStyle(cells[[ii]],cs2))
   
-  saveWorkbook(wb, file)
+  xlsx::saveWorkbook(wb, file)
   #shell.exec(file)
 }
 

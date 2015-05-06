@@ -9,3 +9,11 @@ test_that("check ttwp formula", {
   
   
 })
+
+test_that("check cip_number_check",{
+  a <- sbformula::cip_number_check("CIP123456.123")
+  expect_that((a$cipnumber_ok),is_equivalent_to("CIP123456.123"))
+  expect_that(str(a),prints_text("List of 2"))
+  expect_that(sbformula::cip_number(),throws_error())
+})
+

@@ -26,6 +26,11 @@ sbsum <- function(x){
   ifelse(length(z), sum(z), NA)
 } 
 
+themode <-function(x){
+  tv=table(x)
+  paste(names(tv[tv==max(tv)]),collapse=", ")
+}
+
 # get.data.dict = function(terms="all",sheetName="any"){
 #   #fp = file.path(getwd(),"res","data_dictionary_yield.xls")
 #   dic=getResourceData("dictionary","Variables")

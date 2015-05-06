@@ -32,7 +32,8 @@ Omar Benites
 Some code for this function were inspired by Cookbook for R.
 }
 \seealso{
-Other stats,summary: \code{\link{sbsummary}}
+Other stats,summary: \code{\link{sb_fbsum_excel}};
+  \code{\link{sbsummary}}
 }
 \keyword{stats,}
 \keyword{summary}
