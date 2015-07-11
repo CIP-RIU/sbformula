@@ -29,9 +29,10 @@ sbsummary<- function(data=NULL,idx, groupfactors=NULL, na.rm=FALSE) {
     if (na.rm) sum(!is.na(x))
     else length(x)
   }
-    
+  
   datos <- data
   vvv <- datos[,idx]
+  #vvv <- datos$idx
   lbl <- names(datos[idx])
   measurevar <- lbl
 

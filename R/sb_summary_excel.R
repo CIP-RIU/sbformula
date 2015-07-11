@@ -14,7 +14,7 @@
 #'@family stats,summary
 #'@export 
 
-sb_fbsum_excel <- function(data=NULL,idx, groupfactors=NULL, na.rm=FALSE, datadict=NULL) {
+sb_summary_excel <- function(data=NULL,idx, groupfactors=NULL, na.rm=FALSE, datadict=NULL) {
   #require(doBy)
   # New version of length which can handle NA's: if na.rm==T, don't count them
   if(missing(data)){

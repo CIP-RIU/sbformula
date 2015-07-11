@@ -20,6 +20,9 @@ nmtp <- function(nmtci,nmtcii,nmtciii){
            if(missing(nmtci)  && !missing(nmtcii) && !missing(nmtciii)) {nmtp <- apply(cbind(nmtcii,nmtciii),1,sbsum)}
            if(!missing(nmtci) && missing(nmtcii)  && !missing(nmtciii)) {nmtp <- apply(cbind(nmtci,nmtciii),1,sbsum)}
            if(!missing(nmtci) && !missing(nmtcii) && missing(nmtciii))  {nmtp <- apply(cbind(nmtci,nmtcii),1,sbsum)}
-           if(!missing(nmtci) && !missing(nmtcii) && !missing(nmtciii)) {nmtp <- apply(cbind(nmtci,nmtcii,nmtciii),1,sbsum)}  
+           if(!missing(nmtci) && !missing(nmtcii) && !missing(nmtciii)) {nmtp <- apply(cbind(nmtci,nmtcii,nmtciii),1,sbsum)}
+          
+           
+           
         return(nmtp)  
 }

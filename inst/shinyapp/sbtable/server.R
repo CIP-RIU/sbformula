@@ -4,16 +4,21 @@ shinyServer(
     
     datos <- reactive({
       file1 <- input$fb
+      print(file1)
       if(is.null(file1)){return()}
       datos <- xlsx::read.xlsx(file = file1$datapath,"Fieldbook",stringsAsFactors=FALSE)
-      
+#       if(!is.null(file1)){
+#       file.copy(file1$datapath,paste( file1$datapath, ".xlsx", sep=""))
+#       datos1 <- readxl::read_excel(path = file1$datapath,"Fieldbook")
+#       }
     })
     
     ddict <- reactive({
       file2 <- input$dict
+      #print(fil2)
       if(is.null(file2)){return()}
       dict <- xlsx::read.xlsx(file=file2$datapath,sheetIndex = 1,startRow = 6,stringsAsFactors=FALSE)
-      
+      #print(file=file2$datapath)
     })
     
     

@@ -32,7 +32,7 @@ Omar Benites
 Some code for this function were inspired by Cookbook for R.
 }
 \seealso{
-Other stats,summary: \code{\link{sb_fbsum_excel}};
+Other stats,summary: \code{\link{sb_summary_excel}};
   \code{\link{sbmean}}
 }
 \keyword{stats,}

@@ -1,71 +1,71 @@
-# Calculation of measured variables on potato and sweetpotato
+#'Calculation of measured variables on potato and sweetpotato
 # 
-# @param fb A data frame with the fieldbook data
-# @param plot.size The plot size in square meters
-# @param plant.den Plant density
-# @return A data frame with the calculated variables from the fieldbook
-# @details This function allows to calculated several measured trait in one go.
-# @references Progress in developing a potato ontology for breeders. Reinhard Simon, Vilma Hualla, Raúl Eyzaguirre, Raúl Cordova, Robert O M Mwanga, Genoveva Rossel
-# Progress in developing a sweetpotato ontology for breeders. Reinhard Simon, Vilma Hualla, E. Salas, Rene Gomez, Raúl Cordova, Stef de Haan
-# @details All the variables calculated
-# \itemize{
-#  \item	NTP	Number of tubers planted
-# 	\item	NPE	Number of plants emerged
-# 	\item	Plant_Unif	Plant uniformity
-# 	\item	PGH	Plant growth habit
-# 	\item	Plant_Vigor	Plant vigor
-# 	\item	FLOWERING	Degree of Flowering
-# 	\item	SE	Senescence
-# 	\item	PPE	Percentage plants emerged
-# 	\item	NPH	Number of plants harvested
-# 	\item	PPH	Percentage of plants harvested
-# 	\item	NMTCI	Number marketable tubers category I/plot  
-# 	\item	NMTCII	Number marketable tubers category II/plot 
-# 	\item	NNoMTP	Number of non-marketable tubers/plot
-# 	\item	NMTP	Number marketable tubers/plot
-# 	\item	NMTPL	Number marketable tubers/plant
-# 	\item	TNTP	Total number of tubers/plot
-# 	\item	TNTPL	Total number of tuber/plant
-# 	\item	MTWCI	Marketable tuber weight category I /plot 
-# 	\item	MTWCII	Marketable tuber weight category II/plot 
-# 	\item	NoMTWP	Non-marketable tuber weight/plot
-# 	\item	TTWP	Total tuber weight/plot
-# 	\item	TTWPL	Total tuber weight/plant
-# 	\item	TTYNA	Total tuber yield no adjusted
-# 	\item	TTYA	Total tuber yield adjusted
-# 	\item	MTWP	Marketable tuber weight/plot
-# 	\item	MTWPL	Marketable tuber weight/plant
-# 	\item	MTYA	Marketable tuber yield adjusted
-# 	\item	MTYNA	Marketable tuber yield no adjusted
-# 	\item	Num_Stolon	Number of Stolons
-# 	\item	Leng_Stolon	Length of the stolon
-# 	\item	Tuber_Apper	Tuber Appearance
-# 	\item	Tub_Unif	Tuber Uniformity 
-# 	\item	Tub_Size	Tuber Size
-# 	\item	ATW	Average tuber weight
-# 	\item	ATMW	Average marketable tuber weight
-# 	\item	FWTS1	Fresh weight of tuber sample 1
-# 	\item	FWTS2	Fresh weight of tuber sample 2
-# 	\item	DWTS1	Dry weight of tuber sample 1
-# 	\item	DWTS2	Dry weight of tuber sample 2
-# 	\item	DM1	Dry Matter Content Sample1
-# 	\item	DM2	Dry Matter Content Sample2
-# 	\item	AVDM	Average Dry Matter
-# 	\item	TWA	Tuber weight in air
-# 	\item	TWW	Tuber weight in water
-# 	\item	SG	Specific Gravity
-# 	\item	IWS1	Initial weight sample 1
-# 	\item	IWS2	Initial weight sample 2
-# 	\item	FWS1	Final weight sample 1
-# 	\item	FWS2	Final weight sample 2
-# 	\item	OCS1	Oil Content Sample1 Percentage
-# 	\item	OCS2	Oil Content Sample2 Percentage
-# 	\item	AOCP	Oil Absorption Rate
-# 	\item	Chip_Color	Chipping color
-# }
-# @export
+#' @param fb A data frame with the fieldbook data
+#' @param plot.size The plot size in square meters
+#' @param plant.den Plant density 
+#' @return A data frame with the calculated variables from the fieldbook
+#' @details This function allows to calculated several measured trait in one go.
+#' @references Progress in developing a potato ontology for breeders. Reinhard Simon, Vilma Hualla, Raul Eyzaguirre, Raul Cordova, Robert O M Mwanga, Genoveva Rossel
+#' Progress in developing a sweetpotato ontology for breeders. Reinhard Simon, Vilma Hualla, E. Salas, Rene Gomez, Raul Cordova, Stef de Haan
+#' @details All the variables calculated
+#' \itemize{
+#'  \item	NTP	Number of tubers planted
+#' 	\item	NPE	Number of plants emerged
+#' 	\item	Plant_Unif	Plant uniformity
+#' 	\item	PGH	Plant growth habit
+#' 	\item	Plant_Vigor	Plant vigor
+#' 	\item	FLOWERING	Degree of Flowering
+#' 	\item	SE	Senescence
+#' 	\item	PPE	Percentage plants emerged
+#' 	\item	NPH	Number of plants harvested
+#' 	\item	PPH	Percentage of plants harvested
+#' 	\item	NMTCI	Number marketable tubers category I/plot  
+#' 	\item	NMTCII	Number marketable tubers category II/plot 
+#' 	\item	NNoMTP	Number of non-marketable tubers/plot
+#' 	\item	NMTP	Number marketable tubers/plot
+#' 	\item	NMTPL	Number marketable tubers/plant
+#' 	\item	TNTP	Total number of tubers/plot
+#' 	\item	TNTPL	Total number of tuber/plant
+#' 	\item	MTWCI	Marketable tuber weight category I /plot 
+#' 	\item	MTWCII	Marketable tuber weight category II/plot 
+#' 	\item	NoMTWP	Non-marketable tuber weight/plot
+#' 	\item	TTWP	Total tuber weight/plot
+#' 	\item	TTWPL	Total tuber weight/plant
+#' 	\item	TTYNA	Total tuber yield no adjusted
+#' 	\item	TTYA	Total tuber yield adjusted
+#' 	\item	MTWP	Marketable tuber weight/plot
+#' 	\item	MTWPL	Marketable tuber weight/plant
+#' 	\item	MTYA	Marketable tuber yield adjusted
+#' 	\item	MTYNA	Marketable tuber yield no adjusted
+#' 	\item	Num_Stolon	Number of Stolons
+#' 	\item	Leng_Stolon	Length of the stolon
+#' 	\item	Tuber_Apper	Tuber Appearance
+#' 	\item	Tub_Unif	Tuber Uniformity 
+#' 	\item	Tub_Size	Tuber Size
+#' 	\item	ATW	Average tuber weight
+#' 	\item	ATMW	Average marketable tuber weight
+#' 	\item	FWTS1	Fresh weight of tuber sample 1
+#' 	\item	FWTS2	Fresh weight of tuber sample 2
+#' 	\item	DWTS1	Dry weight of tuber sample 1
+#' 	\item	DWTS2	Dry weight of tuber sample 2
+#' 	\item	DM1	Dry Matter Content Sample1
+#' 	\item	DM2	Dry Matter Content Sample2
+#' 	\item	AVDM	Average Dry Matter
+#' 	\item	TWA	Tuber weight in air
+#' 	\item	TWW	Tuber weight in water
+#' 	\item	SG	Specific Gravity
+#' 	\item	IWS1	Initial weight sample 1
+#' 	\item	IWS2	Initial weight sample 2
+#' 	\item	FWS1	Final weight sample 1
+#' 	\item	FWS2	Final weight sample 2
+#' 	\item	OCS1	Oil Content Sample1 Percentage
+#' 	\item	OCS2	Oil Content Sample2 Percentage
+#' 	\item	AOCP	Oil Absorption Rate
+#' 	\item	Chip_Color	Chipping color
+#'}
+#'@export
 
-sbcalculate <- function(fb,plot.size,plant.den){   
+sbcalculate <- function(fb,plot.size=NA,plant.den=NA){   
   #potato variables
   
   #BEGIN PPE
@@ -89,24 +89,28 @@ sbcalculate <- function(fb,plot.size,plant.den){
     TNTP <- sbformula::tntp(nnomtp = NNoMTP,nmtp = NMTP)
   })
   
-  if(length(fb$NMTCI)>0 & length(fb$NMTCII)>0) fb=within(fb,{ 
-    temp <- sbformula::nmtp(nmtci = NMTCI, nmtcii = NMTCII )
-    TNTP <- temp
+  if(length(fb$NMTCI)>0 & length(fb$NMTCII)>0) fb=within(fb,{
+    #temp <- sbformula::nmtp(nmtci = NMTCI, nmtcii = NMTCII )
+    #TNTP <- temp
+    TNTP <- sbformula::tntp(nmtci = NMTCI, nmtcii = NMTCII)
   })
   
   if(length(fb$NMTCI)>0 & length(fb$NNoMTP)>0 ) fb=within(fb,{  
-    temp <- sbformula::nmtp(nmtci = NMTCI)
-    TNTP <- sbformula::tntp(nmtp = temp,nnomtp = NNoMTP)
+#     temp <- sbformula::nmtp(nmtci = NMTCI)
+#     TNTP <- sbformula::tntp(nmtp = temp,nnomtp = NNoMTP)
+      TNTP <- sbformula::tntp(nmtci= NMTCI,nnomtp = NNoMTP) 
   })			
   
   if(length(fb$NMTCII)>0 & length(fb$NNoMTP)>0 ) fb=within(fb,{  
-    temp <- sbformula::nmtp(nmtcii = NMTCII)
-    TNTP <- sbformula::tntp(nmtp = temp,nnomtp = NNoMTP)
+#     temp <- sbformula::nmtp(nmtcii = NMTCII)
+#     TNTP <- sbformula::tntp(nmtp = temp,nnomtp = NNoMTP)
+      TNTP <- sbformula::tntp(nmtcii = NMTCII, nnomtp = NNoMTP)
   })
   
   if(length(fb$NMTCI)>0 & length(fb$NMTCII)>0 & length(fb$NNoMTP)>0 ) fb=within(fb,{  
-    temp <- sbformula::nmtp(nmtci = NMTCI,nmtcii = NMTCII)
-    TNTP <- sbformula::tntp(nmtp = temp,nnomtp = NNoMTP) 
+#     temp <- sbformula::nmtp(nmtci = NMTCI,nmtcii = NMTCII)
+#     TNTP <- sbformula::tntp(nmtp = temp,nnomtp = NNoMTP) 
+      TNTP <- sbformula::tntp(nmtci = NMTCI, nmtcii = NMTCII, nnomtp = NNoMTP)   
   })
   ###END TNTP  
   
@@ -138,8 +142,8 @@ sbcalculate <- function(fb,plot.size,plant.den){
   })
   
   if(length(fb$MTWCI)>0 & length(fb$MTWCII)>0 & length(fb$NoMTWP)>0 ) fb=within(fb,{  
-    temp <- sbformula::nmtp(nmtci = MTWCI,nmtcii = MTWCII)
-    TTWP <- sbformula::ttwp(temp,nomtwp = NoMTWP)
+    #temp <- sbformula::nmtp(nmtci = MTWCI,nmtcii = MTWCII)
+    TTWP <- sbformula::ttwp(mtwci=MTWCI,mtwcii=MTWCII,nomtwp = NoMTWP)
   })
   ##end TTWP
   
@@ -150,7 +154,7 @@ sbcalculate <- function(fb,plot.size,plant.den){
   #END TTWPL
   
   #BEGIN TTYNA
-  if(length(fb$TTWP)>0  ) fb=within(fb,{	
+  if(length(fb$TTWP)>0) fb=within(fb,{	
     TTYNA <- sbformula::ttyna(ttwp = TTWP,pls = plot.size)	#GTDM-39	
   })
   #END TTYNA

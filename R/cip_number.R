@@ -10,7 +10,7 @@
 
 cip_number_check <- function(cipnumber){
   
-  pattern <- "^(CIP)[0-9]{6}\\.([0-9]{1,3})$"
+  pattern <- "^(CIP)[0-9]{6}(\\.([0-9]{1,3}))?$"
   check <- stringr::str_detect(cipnumber,pattern)
   cipnumber_ok <- cipnumber[check]
   cipnumber_wrong <- cipnumber[!check]

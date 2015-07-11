@@ -2,7 +2,7 @@
 % Please edit documentation in R/outlier_print.R
 \name{outlier_colors}
 \alias{outlier_colors}
-\title{Function to print outlier with colours}
+\title{Function to to highlight outliers with colours in Fieldbook files (MSExcel)}
 \usage{
 outlier_colors(file = "mydata.xlsx", trait, sheetname = "mysheet", ll, ul)
 }
@@ -18,6 +18,6 @@ outlier_colors(file = "mydata.xlsx", trait, sheetname = "mysheet", ll, ul)
 \item{ul}{upper limit}
 }
 \description{
-Function to print outlier with colours
+Function to to highlight outliers with colours in Fieldbook files (MSExcel)
 }
 

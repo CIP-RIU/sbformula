@@ -4,12 +4,16 @@
 \alias{tntp}
 \title{Formula for calculating the Total Number of Tubers/Plot (TNTP)}
 \usage{
-tntp(nmtp, nnomtp)
+tntp(nmtp, nnomtp, nmtci, nmtcii)
 }
 \arguments{
 \item{nmtp}{Number marketable tubers/plot}
 
 \item{nnomtp}{Number of non-marketable tubers/plot}
+
+\item{nmtci}{Number marketable tubers comercial I}
+
+\item{nmtcii}{Number marketable tubers comercial II}
 }
 \value{
 A vector that contains the Total number of tubers/plot

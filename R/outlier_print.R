@@ -1,4 +1,4 @@
-#' Function to print outlier with colours
+#' Function to to highlight outliers with colours in Fieldbook files (MSExcel)
 #'
 #'@param file filename of the fieldbook
 #'@param trait Name of the trait column
