@@ -26,6 +26,7 @@ sb_summary_excel <- function(data=NULL,idx, groupfactors=NULL, na.rm=FALSE, data
   if(missing(groupfactors)){
     stop("Please enter the name of columns that contain grouping variables")
   }
+  
   length2 <- function (x, na.rm=FALSE) {
     if (na.rm) sum(!is.na(x))
     else length(x)
@@ -45,7 +46,7 @@ sb_summary_excel <- function(data=NULL,idx, groupfactors=NULL, na.rm=FALSE, data
     names(datac)[ names(datac) == paste(measurevar, ".length2", sep="") ] <- paste(measurevar,"_n",sep="")
     names(datac)[ names(datac) == paste(measurevar, ".mean",    sep="") ] <- paste(measurevar,"_Mean",sep="")  
     names(datac)[ names(datac) == paste(measurevar, ".sd",      sep="") ] <- paste(measurevar,"_sd",sep = "")
-  }  
+  }  #Cuantitativa
   
   if(tp=="Categorical"){
   #filter categorical data
@@ -53,7 +54,7 @@ sb_summary_excel <- function(data=NULL,idx, groupfactors=NULL, na.rm=FALSE, data
     datac <- doBy::summaryBy(formula, data=data, FUN=c(length2,themode)) #quit the na.rm
     names(datac)[ names(datac) == paste(measurevar, ".length2", sep="") ] <- paste(measurevar,"_n",sep="")
     names(datac)[ names(datac) == paste(measurevar, ".themode", sep="") ] <- paste(measurevar,"_Mode",sep="")                               
-  }
+  }  #Cualitativa
   
   return(datac)
 }

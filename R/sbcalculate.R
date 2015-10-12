@@ -68,6 +68,8 @@
 sbcalculate <- function(fb,plot.size=NA,plant.den=NA){   
   #potato variables
   
+  fb_names <- names(fb)
+  
   #BEGIN PPE
   if(length(fb$NPE)>0 & length(fb$NTP)>0 ) fb=within(fb,{  
     PPE <- sbformula::ppe(npe = NPE,ntp = NTP)
@@ -301,8 +303,11 @@ sbcalculate <- function(fb,plot.size=NA,plant.den=NA){
   })
   
   
-  fieldbook <- fb
-  
+  fieldbook <- fb[,fb_names]
+    
+
+
+
   return(fieldbook)
   
   #fieldbook[,fbn] # make sure not any variables were attached

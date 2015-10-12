@@ -52,3 +52,24 @@ themode <-function(x){
 #   fp = getResourcePath(type)
 #   getResourceSheet(fp, sheetName)
 # }
+
+#'This function print cipnumber which are not well-written
+#'
+#'@param data The fiedlbook data frame
+#'@param cip_name The name of the column which contains the cipnumbers 
+#'@return Return all wrong cip numbers
+#'@keywords cipnumber,quality
+#'@export
+#'
+
+sb_cipnumberquality <-function(data,cip_name){
+
+  cipnumber_checks <- sbformula::cip_number_check(data[,cip_name])
+  if(length(cipnumber_checks$cipnumber_wrong)>0){
+   cipnumber_checks <- paste("This cipnumber does not exist: '", cipnumber_checks$cipnumber_wrong,"'",sep = "")  
+   #cipnumber_checks <- as.data.frame(cipnumber_checks$cipnumber_wrong)
+   cipnumber_checks <- as.data.frame(cipnumber_checks)
+   names(cipnumber_checks) <- "Checks"
+   cipnumber_checks
+  }
+}
