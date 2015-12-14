@@ -24,6 +24,5 @@ ttwp <- function(mtwci,mtwcii,mtwp,nomtwp){
   if(!missing(mtwci) && !missing(mtwcii) && missing(nomtwp))  {ttwp <- apply(cbind(mtwci,mtwcii),1,sbsum)}
   if(!missing(mtwci) && !missing(mtwcii) && !missing(nomtwp)) {ttwp <- apply(cbind(mtwci,mtwcii,nomtwp),1,sbsum)}  
   
-  
   return(ttwp)  
 }

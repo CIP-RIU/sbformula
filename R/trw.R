@@ -12,6 +12,6 @@
 trw <- function(crw,ncrw){
   if(!missing(crw) && missing(ncrw))  {trw <- crw}  
   if(missing(crw)  && !missing(ncrw)) {trw <- ncrw}        
-  if(!missing(crw) && !missing(ncrw)) {trw <- apply(cbind(crw,ncrw),1,sbsum)/2}        
+  if(!missing(crw) && !missing(ncrw)) {trw <- apply(cbind(crw,ncrw),1,sbsum)}        
   return(trw)
 }
