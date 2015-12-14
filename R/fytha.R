@@ -10,10 +10,11 @@
 #'@export 
 #'
 fytha <- function(vw,pls){
+  
             if(missing(pls)){
               stop("Please enter 'net plot size'")
             }
-            if(missing(fytha)){
+            if(missing(vw)){
               stop("Please enter 'vine weight'")
             }
             fytha  <-  vw*10/pls
