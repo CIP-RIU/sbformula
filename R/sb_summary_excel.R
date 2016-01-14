@@ -12,7 +12,7 @@
 #'Crop Ontology 2014.
 #'@keywords stats, summary
 #'@family stats,summary
-#'@export 
+#'@export  
 
 sb_summary_excel <- function(data=NULL,idx, groupfactors=NULL, na.rm=FALSE, datadict=NULL) {
   #require(doBy)
