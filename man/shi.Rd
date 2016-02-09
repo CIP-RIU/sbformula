@@ -21,7 +21,7 @@ Formula for calculating the Harvest sowing index - Survival (SHI)
 Formula for calculating the harvest sowing index - Survival
 }
 \author{
-Omar Benites
+Omar Benites, Raul Eyzaguirre
 }
 \seealso{
 Other potato,Yield; Late Blight: \code{\link{pph}}

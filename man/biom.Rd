@@ -4,7 +4,7 @@
 \alias{biom}
 \title{Formula for calculating the Biomass Yield (BIOM)}
 \usage{
-biom(vw, crw, ncrw, pls)
+biom(vw, crw, ncrw, pls = NA)
 }
 \arguments{
 \item{vw}{Vine weight}

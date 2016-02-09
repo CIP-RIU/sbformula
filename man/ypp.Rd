@@ -23,7 +23,7 @@ Formula for calculating the Yield Per Plant (YPP)
 Formula for calculating the yield per plant
 }
 \author{
-Omar Benites
+Omar Benites, Raul Eyzaguirre
 }
 \seealso{
 Other sweetpotato,quality,harvest: \code{\link{acrw}},
