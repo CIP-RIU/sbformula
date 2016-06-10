@@ -9,14 +9,13 @@
 #'@keywords potato, agronomy,harvest,quantitative-continuous,yield,late blight,plant
 #'@family potato,yield,late blight,harvest,plant
 #'@export 
-nmtpl <- function(nmtp,nph){
+nmtpl <- function(nmtp, nph = NA){
   
-     if (missing(nmtp)){
-       stop("Please enter the Number of marketable tubers/plot 'nmtp'")
-     }
-     if (missing(nph)){
-       stop("Please enter Number of plants harvested 'nph'")
-     }
+#      if (missing(nmtp)){
+#        stop("Please enter the Number of marketable tubers/plot 'nmtp'")
+#      }
+     if (missing(nph)) nph <- NA 
+     #if (nph == 0)     nph <- NA 
      nmtpl <- nmtp/nph
      return(nmtpl)
 } 

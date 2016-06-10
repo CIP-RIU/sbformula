@@ -18,6 +18,8 @@ ttwp <- function(mtwci,mtwcii,mtwp,nomtwp){
   if(!missing(mtwci) && missing(mtwcii)  && missing(nomtwp))  {ttwp <- mtwci}  
   if(missing(mtwci)  && !missing(mtwcii) && missing(nomtwp))  {ttwp <- mtwcii}        
   if(missing(mtwci)  && missing(mtwcii)  && !missing(nomtwp)) {ttwp <- nomtwp}
+  if(!missing(mtwp)  && missing(nomtwp)) {ttwp <- apply(cbind(mtwp),1,sbsum)}
+  if(missing(mtwp)  && !missing(nomtwp)) {ttwp <- apply(cbind(nomtwp),1,sbsum)}
   if(!missing(mtwp)  && !missing(nomtwp)) {ttwp <- apply(cbind(mtwp,nomtwp),1,sbsum)}
   if(missing(mtwci)  && !missing(mtwcii) && !missing(nomtwp)) {ttwp <- apply(cbind(mtwcii,nomtwp),1,sbsum)}
   if(!missing(mtwci) && missing(mtwcii)  && !missing(nomtwp)) {ttwp <- apply(cbind(mtwci,nomtwp),1,sbsum)}

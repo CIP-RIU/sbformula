@@ -175,19 +175,21 @@ sbcalculate <- function(fb,plot.size=NA,plant.den=NA){
   #END MTWP
   
   #BEGIN MTWPL
-  if(length(fb$MTWP)>0 & length(fb$NPH)>0 ) fb=within(fb,{	
+  #if(length(fb$MTWP)>0 & length(fb$NPH)>0 ) fb=within(fb,{
+  if(all(is.element(c("MTWP","NPH"),names(fb)))) fb=within(fb,{
     MTWPL <- sbformula::mtwpl(mtwp = MTWP,nph = NPH)
-  })		
+  #})
+  })
   #END MTWPL
   
   #BEGIN MTYNA
-  if(length(fb$MTWP)>0 ) fb=within(fb,{	
+  if(all(is.element("MTWP",names(fb)))) fb=within(fb,{	
     MTYNA <- sbformula::mtyna(mtwp = MTWP,pls = plot.size)
   })	#GTDM-39
   #END MTYNA
   
   #BEGIN MTYA
-  if(length(fb$MTWPL)>0 & length(plant.den)>0) fb=within(fb,{	
+  if(all(is.element(c("MTWPL", "NMTP"),names(fb)))) fb=within(fb,{	
     MTYA <- sbformula::mtya(mtwpl = MTWPL,plantden = plant.den)
   })#GTDM-39		
   #END MTYA
@@ -197,7 +199,7 @@ sbcalculate <- function(fb,plot.size=NA,plant.den=NA){
     ATW <- sbformula::atw(ttwp = TTWP,tntp = TNTP)
   })	
   
-  if(length(fb$MTWP)>0 & length(fb$NMTP)>0) fb=within(fb,{	
+  if(all(is.element(c("MTWP", "NMTP"),names(fb))))  fb=within(fb,{	
     ATMW <- sbformula::atmw(mtwp = MTWP,nmtp = NMTP)
   })	
   

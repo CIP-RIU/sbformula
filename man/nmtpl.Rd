@@ -4,7 +4,7 @@
 \alias{nmtpl}
 \title{Formula for calculating the Number of Marketable Tubers/Plant (NMTPL)}
 \usage{
-nmtpl(nmtp, nph)
+nmtpl(nmtp, nph = NA)
 }
 \arguments{
 \item{nmtp}{Number of marketable tubers/plot}
