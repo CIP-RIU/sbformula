@@ -4,7 +4,7 @@
 \alias{calculate_form_harvest}
 \title{Calculation of standard evaluation of yield variables under Participatory Varietal Selection Methodology}
 \usage{
-calculate_form_harvest(data, plot.size = NA, plant.den = NA)
+calculate_form_harvest(data, plot_size = NA, plant_den = NA)
 }
 \arguments{
 \item{data}{A data frame with the fieldbook data}

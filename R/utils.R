@@ -31,6 +31,21 @@ themode <-function(x){
   paste(names(tv[tv==max(tv)]),collapse=", ")
 }
 
+#' Logical function to detect if a group of elements are part of the set of header
+#' @description Check if a header(s) correspond to the fieldbook names. It returns a TRUE if all values are contained in the set and FALSE
+#' if just few or neither elements are contained into the set.
+#' 
+is_contained <- function(..., set){
+  
+  logic_value <- all(is.element(c(...), set))
+  logic_value
+
+}
+
+#all(is.element(c("MTWP", "NMTP"),names(fb)))
+
+
+
 # get.data.dict = function(terms="all",sheetName="any"){
 #   #fp = file.path(getwd(),"res","data_dictionary_yield.xls")
 #   dic=getResourceData("dictionary","Variables")

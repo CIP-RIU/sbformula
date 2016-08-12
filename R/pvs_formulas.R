@@ -27,6 +27,97 @@ sglo <- function(sm = NULL, sw = NULL){
 } 
 
 
+#' Percentages and scores by Plant Development
+#' 
+#' @param phase Phase or Stage of the plant development. There are 3 options: Flowering, Harvesting and Storage
+#' @param data A data frame with the field data
+#' 
+scriteria_phase <- function (phase, data) {
+  
+  fieldbook <- as.data.frame(data)
+  phase <- as.character(phase)
+  fieldbook <- fieldbook[fieldbook[,"PHASE"]==phase,]
+  
+  #fphase$PMEN=round(100*fphase$SCMEN/sum(fphase$SCMEN,na.rm = TRUE),2)
+  
+  #if(is_contained("SCORE_MEN", set = fb_names)) fieldbook=within(fieldbook,{  
+  #SCORE_MEN <- NULL
+  #SCORE_WOMEN <- NULL
+  #SCORE_GLOBAL <- NULL
+  
+  fieldbook <- mutate(fieldbook, 
+                        PCT_MEN = round(100*SCORE_MEN/sum(SCORE_MEN,na.rm = TRUE) , 2)
+  )
+    
+  fieldbook <- mutate(fieldbook, 
+                        PCT_WOMAN = round(100*SCORE_WOMEN/sum(SCORE_WOMEN, na.rm = TRUE), 2)
+  )
+  
+  fieldbook <- mutate(fieldbook, 
+                        PCT_GLOBAL = round(100*SCORE_GLOBAL/sum(SCORE_GLOBAL, na.rm = TRUE), 2)
+  )
+    
+  fieldbook
+
+} 
+
+
+
+#' Percetages and global scores by Selection Criteria
+#' 
+#' @param data A data frame
+#' @description Gathering and Ranking of Criteria at Flowering, harvest and post-harvest stage. 
+#' The group is gathered and the objectives of the trial and the evaluation are briefly explained.
+#' The group is asked: What is it that you look for in a new variety of potato, taking into account
+#' its foliage? In other words: When do we say that a variety is good, while evaluating only its
+#' foliage?.
+#' The greatest amount of possible answers are encouraged and a list is compiled of all the
+#' criteria and reasons mentioned by the farmers.
+#' For example:
+#' (a) Resistance to late blight,
+#' (b) Enough foliage to feed my cow,
+#' (c) That the plant does not extend and touch the floor (size when erect),
+#' (d) That it is resistant to moths,
+#' (e) That the foliage is very green,
+#' (f) That the plant shows vigor, etc. (according to what is indicated by the farmers).
+#' Each of the mentioned criteria is written on a paper bag or on a cardboard tray. In other
+#' words, if the farmers have identified 6 criteria, then we also have 6 bags or cardboard trays. 
+#' 
+#' @importFrom dplyr mutate
+#' @export
+#' 
+
+calculate_form_scriteria <- function(data){
+
+  fieldbook <- as.data.frame(data)
+  fb_names <- names(fieldbook)
+  
+  
+  if(is_contained("SCORE_MEN", set = fb_names)){  
+                    fieldbook <- mutate(fieldbook, 
+                                 SCORE_GLOBAL = sglo(sm = SCORE_MEN,sw = NULL))
+  }
+  
+  if(is_contained("SCORE_WOMEN", set = fb_names)) {  
+                     fieldbook <- mutate(fieldbook, 
+                                  SCORE_GLOBAL  = sglo(sm = NULL, sw = SCORE_WOMEN))
+  }
+  
+  if(is_contained("SCORE_MEN", "SCORE_WOMEN", set = fb_names)) {  
+                      fieldbook <- mutate(fieldbook, 
+                                   SCORE_GLOBAL  = sglo(sm = SCORE_MEN, sw = SCORE_WOMEN))
+  }  
+  
+  #fieldbook <- rbind(crit.phase("Flowering",temp6),crit.phase("Harvest",temp6),crit.phase("Storage",temp6)) 
+  fieldbook <- rbind(scriteria_phase("Flowering", fieldbook), scriteria_phase("Harvest", fieldbook), scriteria_phase("Storage", fieldbook))   
+  
+  #ToDo
+  fieldbook 
+  #fieldbook <- fieldbook[, fb_names]
+  
+  
+}
+
 #' Mother and Baby scores calculations to select best clones by Parcel.
 #' 
 #' @param data A data frame
@@ -40,6 +131,7 @@ sglo <- function(sm = NULL, sw = NULL){
 calculate_form_sclones <- function(data){
   
   fieldbook <- data
+  fb_names <- names(data)
   
   if("MSM" %in% names(fieldbook)){
         fieldbook <- mutate(fieldbook, 
@@ -68,8 +160,9 @@ calculate_form_sclones <- function(data){
     fieldbook <- mutate(fieldbook, 
                         BSGLO = sglo(sm =  BSM, sw = BSWM))
   }
-  fieldbook
   
+  fieldbook <- fieldbook[,fb_names]
+  return(fieldbook)
 }
 
 #' Calculation of standard evaluation of yield variables under Participatory Varietal Selection Methodology
@@ -84,12 +177,13 @@ calculate_form_sclones <- function(data){
 #' @export
 #' 
 
-calculate_form_harvest <- function(data ,plot.size=NA, plant.den=NA){
+calculate_form_harvest <- function(data, plot_size=NA, plant_den=NA){
   
    fieldbook <- data
-  
-   if(length(fieldbook$NTP)>0 & length(fieldbook$NPH)>0 ) { 
-    
+   fb_names <- names(fieldbook)
+   #if(length(fieldbook$NTP)>0 & length(fieldbook$NPH)>0 ) { 
+   if(is_contained("NTP","NPH", set = fb_names)) {    
+   
       fieldbook <- mutate(fieldbook, 
                         PPH 	= pph(nph = NPH, ntp = NTP))	
     }		  
@@ -148,13 +242,13 @@ calculate_form_harvest <- function(data ,plot.size=NA, plant.den=NA){
     if(length(fieldbook$TTWP)>0) {  
       	
       fieldbook <- mutate(fieldbook, 
-                          TTYNA = ttyna(ttwp = TTWP, pls = plot.size))
+                          TTYNA = ttyna(ttwp = TTWP, pls = plot_size))
     }
  
     if(length(fieldbook$TTWPL)>0  ) {  
       #TTYA	= (TTWPL*plant.den)/1000}) # GTDM-45 for m&b	1
       fieldbook <- mutate(fieldbook, 
-                          TTYA	= ttya(ttwpl = TTWPL, plantden = plant.den))
+                          TTYA	= ttya(ttwpl = TTWPL, plantden = plant_den))
     }
     
     if(length(fieldbook$MTWP)>0 & length(fieldbook$NPH)>0 ) {  
@@ -166,14 +260,14 @@ calculate_form_harvest <- function(data ,plot.size=NA, plant.den=NA){
     if(length(fieldbook$MTWP)>0 ) {  
       #MTYNA	= (MTWP/plot.size)*10
       fieldbook <- mutate(fieldbook, 
-                          MTYNA = mtyna(mtwp = MTWP, pls = plot.size))
+                          MTYNA = mtyna(mtwp = MTWP, pls = plot_size))
     
     }	#GTDM-39	
     
     if(length(fieldbook$MTWPL)>0) {  
       #MTYA	= (MTWPL*plant.den)/1000
       fieldbook <- mutate(fieldbook, 
-                          MTYA = mtya(mtwpl = MTWPL, plantden = plant.den))
+                          MTYA = mtya(mtwpl = MTWPL, plantden = plant_den))
     }#GTDM-39		  
     
     if(length(fieldbook$TTWP)>0 & length(fieldbook$TNTP)>0) {  
@@ -182,9 +276,81 @@ calculate_form_harvest <- function(data ,plot.size=NA, plant.den=NA){
                           ATW = atw(ttwp = TTWP, tntp = TNTP))
      }
   
+  #fieldbook <- fieldbook[,fb_names]
   fieldbook
-  
 }
+
+
+#' Calculation of standard evaluation values in Dormancy Test in Potato Seed Tubers
+#'
+#' @param  data A dataframe with the fieldbook data
+#' @description To determine the dormancy period and the initiation of sprouting of advanced
+#' clones for its use as seed under storage conditions of diffuse light or rustic storage.
+#' @importFrom dplyr mutate
+#' @export
+#'
+
+calculate_form_dormancy <- function(data){
+  
+  fieldbook <- data
+  fb_names <- names(fieldbook)
+  
+  if(is_contained("ITW","FTWSPT", set = fb_names)) {  
+    
+   fieldbook <- mutate(fieldbook, 
+                         PWL_SPT = pct_if(inital_value = ITW, final_value = -FTWSPT))
+  }
+  
+  if(is_contained("ITW","FTWRSPT", set = fb_names)) {  
+   # PWL_RSPT = ((ITW-FTWRSPT)/ITW)*100
+    
+    fieldbook <- mutate(fieldbook, 
+                         PWL_RSPT = pct_if(inital_value = ITW, final_value = -FTWRSPT))
+    
+    } 
+  
+  #fieldbook <- fieldbook[,fb_names]
+  fieldbook
+
+}
+
+#' Percetages and Global scores by Selection Criteria at Post-Harvest Stage
+#' 
+#' @param data A dataframe with the fieldbook data
+#' @description With the group of farmers, the storage facilities of each one of the families is visited in order to
+#' select the best clones according to storage characteristics, taking into account the previously
+#' identified criteria. If desirable, the clones / varieties in each of the 3 farmer stores can also be
+#' ranked by different groups of evaluators
+#' @export
+#' 
+
+calculate_form_postharvest <- function(data){
+
+    fieldbook <- data
+    fb_names <- names(fieldbook)
+    
+    
+    if(is_contained("SCORE_MEN", set = fb_names)) {  
+      fieldbook <- mutate(fieldbook, 
+                          SCORE_GLOBAL = sglo(sm = SCORE_MEN,sw = NULL))
+    }
+    
+    
+    if(is_contained("SCORE_WOMEN", set = fb_names)) {  
+      fieldbook <- mutate(fieldbook, 
+                          SCORE_GLOBAL  = sglo(sm = NULL,sw = SCORE_WOMEN))
+    }
+    
+    if(is_contained("SCORE_MEN", "SCORE_WOMEN", set = fb_names)) {  
+      fieldbook <- mutate(fieldbook, 
+                          SCORE_GLOBAL  = sglo(sm = SCORE_MEN, sw = SCORE_WOMEN))
+     }
+    
+    fieldbook
+
+}
+
+
 
 
 

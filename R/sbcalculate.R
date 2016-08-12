@@ -176,34 +176,34 @@ sbcalculate <- function(fb,plot.size=NA,plant.den=NA){
   
   #BEGIN MTWPL
   #if(length(fb$MTWP)>0 & length(fb$NPH)>0 ) fb=within(fb,{
-  if(all(is.element(c("MTWP","NPH"),names(fb)))) fb=within(fb,{
+  if(is_contained("MTWP","NPH", set = fb_names)) fb=within(fb,{
     MTWPL <- sbformula::mtwpl(mtwp = MTWP,nph = NPH)
   #})
   })
   #END MTWPL
   
   #BEGIN MTYNA
-  if(all(is.element("MTWP",names(fb)))) fb=within(fb,{	
+  if(is_contained("MTWP", set = fb_names)) fb=within(fb,{	
     MTYNA <- sbformula::mtyna(mtwp = MTWP,pls = plot.size)
   })	#GTDM-39
   #END MTYNA
   
   #BEGIN MTYA
-  if(all(is.element(c("MTWPL", "NMTP"),names(fb)))) fb=within(fb,{	
+  if(is_contained("MTWPL", "NMTP", set = fb_names)) fb=within(fb,{	
     MTYA <- sbformula::mtya(mtwpl = MTWPL,plantden = plant.den)
   })#GTDM-39		
   #END MTYA
   
   
-  if(length(fb$TTWP)>0 & length(fb$TNTP)>0) fb=within(fb,{	
+  if(is_contained("TTWP", "TNTP", set = fb_names)) fb=within(fb,{	
     ATW <- sbformula::atw(ttwp = TTWP,tntp = TNTP)
   })	
   
-  if(all(is.element(c("MTWP", "NMTP"),names(fb))))  fb=within(fb,{	
+  if(is_contained("MTWP", "NMTP",set = fb_names))  fb=within(fb,{	
     ATMW <- sbformula::atmw(mtwp = MTWP,nmtp = NMTP)
   })	
   
-  if(length(fb$DWTS1)>0 & length(fb$FWTS1)>0) fb=within(fb,{	
+  if(is_contained( "DWTS1", "FWTS1",set = fb_names)) fb=within(fb,{	
     DM1 <- sbformula::dm1(DWTS1,FWTS1)
   })	
   
@@ -322,3 +322,8 @@ sbcalculate <- function(fb,plot.size=NA,plant.den=NA){
 # 
 #  plot.size <- 15
 #  plant.den <- 14
+
+
+
+
+
