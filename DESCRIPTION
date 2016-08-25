@@ -2,7 +2,7 @@ Package: sbformula
 Type: Package
 Title: Formulas for crop breeding and standart evaluation trial
 Version: 2.0.0
-Date: 2015-03-24
+Date: 2016-8-25
 Author: Omar Benites
 Maintainer: Omar Benites <obacc07@gmail.com>
 Description: Formulas for plant breeding trials. All these formulas belong to
