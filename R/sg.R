@@ -14,12 +14,14 @@
 sg <- function(twa,tww){
   
       if(missing(twa)){
-        stop("Please enter the Tuber weight in air 'twa'")
+        #stop("Please enter the Tuber weight in air 'twa'")
+        sg <- NA
       }     
       if(missing(tww)){
-        stop("Please enter the Tuber weight in water 'tww'")
+        #stop("Please enter the Tuber weight in water 'tww'")
+        sg <- NA
       }
       
-      sg = twa/apply(cbind(twa,-tww),1,sbsum)
+      sg  <-  twa/apply(cbind(twa,-tww),1,sbsum)
       return(sg)
 }

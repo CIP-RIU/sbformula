@@ -30,8 +30,9 @@ Protocol for tuber bulking maturity assessment of elite and advanced potato clon
 Other Bulking-maturity, evaluation, potato: \code{\link{atmw_1hd}},
   \code{\link{atmw_2hd}}, \code{\link{atmw_3hd}},
   \code{\link{atnomw_1hd}}, \code{\link{atnomw_2hd}},
-  \code{\link{atnomw_3hd}}, \code{\link{sg_1hd}},
-  \code{\link{sg_2hd}}, \code{\link{sg_3hd}},
+  \code{\link{atnomw_3hd}}, \code{\link{atnomw}},
+  \code{\link{av_sg}}, \code{\link{sg_2hd}},
+  \code{\link{sg_3hd}}, \code{\link{sg_average}},
   \code{\link{sgs1_1hd}}, \code{\link{sgs1_2hd}},
   \code{\link{sgs1_3hd}}, \code{\link{sgs2_2hd}},
   \code{\link{sgs2_3hd}}

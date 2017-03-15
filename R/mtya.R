@@ -14,10 +14,12 @@
 mtya <- function(mtwpl,plantden){
   
   if (missing(mtwpl)){
-    stop("Please enter the Total tuber weight/plot 'mtwpl'")
+    #stop("Please enter the Total tuber weight/plot 'mtwpl'")
+    mtya <- NA
   }
   if (missing(plantden)){
-    stop("Please enter the plant density ")
+    #stop("Please enter the plant density ")
+    mtya <- NA
   }
   mtya <- (mtwpl*plantden)/1000
   return(mtya)

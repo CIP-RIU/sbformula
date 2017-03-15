@@ -1,6 +1,6 @@
 #'Function for calculating Average Specific Gravity
 #' 
-#' @param sgs1_1hd Specific gravity sample 1 (First harvest date)
+#' @param sgs_1hd Specific gravity sample 1 (First harvest date)
 #' @param sgs2_1hd Specific gravity sample 2 (First harvest date)
 #' @return sg_1hd Return the specific gravity (First harvest date)
 #' @author Omar Benites
@@ -10,18 +10,11 @@
 #' @export 
 #' 
 
-sg_average  <- function(...){
+av_sg <- function(...){
   
-  if(missing(sgs1_1hd)){
-    stop("Please enter the specific gravity sample 1 'sgs1_1hd'")
-  }
+  av_sg  <-  apply(cbind(...), 1, mean, na.rm=T)
   
-  if(missing(sgs2_1hd)){
-    stop("Please enter the specific gravity sample 2 'sgs2_1hd'")
-  }
-  
-  sg_1hd <- apply(cbind(sgs1_1hd,sgs2_1hd),1,mean, na.rm=TRUE)
-  return(sg_1hd)
+  return(av_sg)
 }
 
 

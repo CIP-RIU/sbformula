@@ -12,15 +12,17 @@
 acrw <- function(crw,nocr){
         
         if(missing(crw)){
-          stop("Please enter the commercial root weight 'crw'")
+          #stop("Please enter the commercial root weight 'crw'")
+          acrw <- NA
         }
         if(missing(nocr)){
-          stop("Please enter the number of commercial roots 'nocr'")
+          #stop("Please enter the number of commercial roots 'nocr'")
+          acrw <- NA
         }
 #         if(nocr==0){acrw <- NA}
 #         else{
 #           acrw <- crw/nocr
 #         }
-        ifelse(nocr==0, acrw <- NA, acrw <- crw/nocr)
+        ifelse(sum(nocr,na.rm = TRUE)==0, acrw <- NA, acrw <- crw/nocr)
         return(acrw)
 }

@@ -10,11 +10,14 @@
 #'@export 
 #'
 dm <- function(dmd,dmf){
+  
             if(missing(dmf)){
-              stop("Fresh weight of roots for dry matter assessment 'dmf'")
+              #stop("Fresh weight of roots for dry matter assessment 'dmf'")
+              dmf <- NA
             }
             if(missing(dmd)){
-              stop("Please enter dry weight of dmf samples 'dmd'")
+              #stop("Please enter dry weight of dmf samples 'dmd'")
+              dmd <- NA
             }
             dm <- (dmd/dmf)*100 
             return(dm)

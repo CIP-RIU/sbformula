@@ -14,10 +14,12 @@
 ppe <- function(npe,ntp){
   
   if (missing(npe)){
-    stop("Please enter the Number of plants emerged 'npe'")
+    #stop("Please enter the Number of plants emerged 'npe'")
+    ppe <- NA
   }
   if (missing(ntp)){
-    stop("Please enter the Number of tubers planted 'ntp'")
+    #stop("Please enter the Number of tubers planted 'ntp'")
+    ppe <- NA
   }
   ppe  <- (npe*100)/ntp
   return(ppe)

@@ -10,16 +10,18 @@
 #' @export 
 #' 
 
-atmw_2hd <- function(mtwp_2hd,nmtp_2hd){
+atmw_2hd <- function(mtwp_2hd , nmtp_2hd){
   
   if(missing(mtwp_2hd)){
-    stop("Please enter the Non-marketable tuber weight/plot 'mtwp_2hd'")
+    #stop("Please enter the Non-marketable tuber weight/plot 'mtwp_2hd'")
+    atmw_2hd <- NA
   }
   
   if(missing(nmtp_2hd)){
-    stop("Please enter the Number of non-marketable tubers/plot 'nmtp_2hd'")    
+    #stop("Please enter the Number of non-marketable tubers/plot 'nmtp_2hd'")    
+    atmw_2hd <- NA
   }
   
- atmw_2hd  <-  (mtwp_2hd/nmtp_2hd)*1000
+  atmw_2hd  <- (mtwp_2hd/nmtp_2hd)*1000
   return(atmw_2hd)
 }

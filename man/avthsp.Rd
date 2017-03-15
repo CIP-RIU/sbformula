@@ -4,12 +4,10 @@
 \alias{avthsp}
 \title{Function for calculating the Average Sprout thickness (AVTHSP)}
 \usage{
-avthsp(thlsp1, thlsp2)
+avthsp(...)
 }
 \arguments{
-\item{thlsp1}{Thickness of lateral sprout Number}
-
-\item{thlsp2}{Thickness of lateral sprout Number}
+\item{...}{Thickness of lateral sprout}
 }
 \value{
 avthsp Return the average sprout thickness
@@ -20,7 +18,7 @@ The date for recording this variable will differ among clones as it depends on t
 Measure should be  performed in at most three sprouts per tuber in multiple sprouting tubers(include the longest one) Suggestion: use a Vernier calliper. An average is calculated per tuber
 }
 \details{
-This function calculates the average sprout thickness (Thickness of lateral sprout Number)
+This function calculates the average sprout thickness
 }
 \author{
 Omar Benites

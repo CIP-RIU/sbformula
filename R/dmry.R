@@ -15,13 +15,16 @@
 dmry <- function(crw,ncrw,pls,dmd,dmf){
   
   if(missing(pls)){
-  stop("Please enter the net plot size 'pls'")
+  #stop("Please enter the net plot size 'pls'")
+    dmry <- NA
   }
   if(missing(dmd)){
-  stop("Please enter the dry matter root yield 'dmd")
+  #stop("Please enter the dry matter root yield 'dmd")
+    dmry <- NA
   }
   if(missing(dmf)){
-  stop("Please enter the Fresh weight of roots for dry matter assessment 'dmf")
+  #stop("Please enter the Fresh weight of roots for dry matter assessment 'dmf")
+    dmry <- NA
   }                  
   if(!missing(crw) && missing(ncrw))  {dmry <- (crw*10)/pls*dmd/dmf  }  
   if(missing(crw)  && !missing(ncrw)) {dmry <- (ncrw*10)/pls*dmd/dmf }       

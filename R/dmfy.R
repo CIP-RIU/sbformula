@@ -14,16 +14,20 @@
 dmfy <- function(vw,pls,dmvd,dmvf){
 
               if(missing(pls)){
-                stop("Please enter 'vw'")
+                #stop("Please enter 'vw'")
+                dmfy <- NA
               }
               if(missing(vw)){
-                stop("Please enter 'pls'")
+                #stop("Please enter 'pls'")
+                dmfy <- NA
               }
               if(missing(dmvd)){
-                stop("Please enter 'dmvd'")
+                #stop("Please enter 'dmvd'")
+                dmfy <- NA
               }
               if(missing(dmvf)){
-                stop("Please enter 'dmvf'")
+                #stop("Please enter 'dmvf'")
+                dmfy <- NA
               }              
               dmfy <- (vw*10/pls)*dmvd/dmvf
               return(dmfy)

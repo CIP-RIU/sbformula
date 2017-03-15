@@ -14,10 +14,12 @@
 ttwpl <- function(ttwp,nph){
   
   if (missing(ttwp)){
-    stop("Please enter the Total tuber weight/plot 'ttwp'")
+    #stop("Please enter the Total tuber weight/plot 'ttwp'")
+    ttwpl <- NA
   }
   if (missing(nph)){
-    stop("Please enter Number of plants harvested 'nph'")
+    #stop("Please enter Number of plants harvested 'nph'")
+    ttwpl <- NA
   }
   ttwpl <- ttwp/nph
   return(ttwpl)

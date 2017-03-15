@@ -29,26 +29,29 @@ str2days <- function(adate=""){
 #'@family Sprout-dormancy, evaluation, potato
 #'@export
 
-dorpd <- function(datesp,ddehaulm){
+dorpd <- function(datesp, ddehaulm){
   
   if(missing(datesp)){
-    stop("Please enter the date of sprouting 'datesp'")
-    return(FALSE)
+    #stop("Please enter the date of sprouting 'datesp'")
+    #return(FALSE)
+    dorpd <- NA
   }
   
-  if(missing(ddehaulm)){
-    stop("Please etner the date of dehaulm 'date.dehaulm'")
-    return(FALSE)
+  else if(missing(ddehaulm)){
+    #stop("Please etner the date of dehaulm 'date.dehaulm'")
+    #return(FALSE)
+    dorpd <- NA
   }
   
-  if((is.na(ddehaulm))){
-    stop('Please enter dates in specified format (yyyy-mm-dd)')
-    return(FALSE)
+  else if(sum(ddehaulm,na.rm = TRUE)){
+    #stop('Please enter dates in specified format (yyyy-mm-dd)')
+    #return(FALSE)
+    dorpd <- NA
   }
-  
-  date.dehaulm = str2days(ddehaulm)
-    
-  dorpd <- apply(cbind(datesp),1,str2days) - date.dehaulm
-  return(dorpd)
+  else {
+    date.dehaulm = str2days(ddehaulm)
+    dorpd <- apply(cbind(datesp),1,str2days) - date.dehaulm
+    return(dorpd)
+  }
 }
   

@@ -14,10 +14,12 @@
 mtwpl <- function(mtwp,nph){
   
       if (missing(mtwp)){
-        stop("Please enter the Marketable tuber weight/plot 'mtwp'")
+        #stop("Please enter the Marketable tuber weight/plot 'mtwp'")
+        mtwpl <- NA
       }
       if (missing(nph)){
-        stop("Please enter Number of plants harvested 'nph'")
+        #stop("Please enter Number of plants harvested 'nph'")
+        mtwpl <- NA
       }
       mtwpl  <-  mtwp/nph
       return(mtwpl)

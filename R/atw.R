@@ -14,10 +14,12 @@
 atw <- function(ttwp,tntp){
       
       if (missing(ttwp)){
-        stop("Please enter the Total tuber weight/plot 'ttwp'")
+        #stop("Please enter the Total tuber weight/plot 'ttwp'")
+        atw <- NA
       }
       if (missing(tntp)){
-        stop("Please enter the Total number of tubers/plot 'tntp'")
+        #stop("Please enter the Total number of tubers/plot 'tntp'")
+        atw <- NA
       }
       atw <- (ttwp/tntp)*1000
       return(atw)

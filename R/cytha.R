@@ -13,10 +13,12 @@
 cytha <- function(crw,pls){
   
            if (missing(crw)){
-              stop("Please enter the commercial root weight 'crw'")
+             cytha <- NA
+             # stop("Please enter the commercial root weight 'crw'")
            }
            if (missing(pls)){
-             stop("Please enter the net plot size 'pls'")
+             #stop("Please enter the net plot size 'pls'")
+             cytha <- NA
            }
            cytha <-  (crw*10)/pls
         }

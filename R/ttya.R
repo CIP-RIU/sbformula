@@ -14,11 +14,17 @@
 ttya <- function(ttwpl,plantden){
   
   if (missing(ttwpl)){
-    stop("Please enter the Total tuber weight/plot 'ttwpl'")
+    #stop("Please enter the Total tuber weight/plot 'ttwpl'")
+    ttya <- NA
   }
+  
+  
   if (missing(plantden)){
-    stop("Please enter the plant density ")
+    #stop("Please enter the plant density ")
+    ttya <- NA
   }
+  
+  
   ttya <- (ttwpl*plantden)/1000
   return(ttya)
 } 

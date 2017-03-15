@@ -14,10 +14,12 @@
 pph <- function(nph,ntp){
   
   if (missing(nph)){
-    stop("Please enter the Number of Plants Harvested 'nph'")
+    #stop("Please enter the Number of Plants Harvested 'nph'")
+    pph <- NA
   }
   if (missing(ntp)){
-    stop("Please enter the Number of Tubers Planted 'ntp'")
+    #stop("Please enter the Number of Tubers Planted 'ntp'")
+    pph <- NA
   }
   pph  <- (nph*100)/ntp
   return(pph)

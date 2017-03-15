@@ -12,11 +12,13 @@
 atmw_1hd <- function(mtwp_1hd,nmtp_1hd){
    
    if(missing(mtwp_1hd)){
-     stop("Please enter the Marketable tuber weight/plot 'mtwp_1hd'")
+     #stop("Please enter the Marketable tuber weight/plot 'mtwp_1hd'")
+     atmw_1hd <- NA
    }
    
    if(missing(nmtp_1hd)){
-     stop("Please enter the Number marketable tubers/plot 'nmtp_1hd'")
+     #stop("Please enter the Number marketable tubers/plot 'nmtp_1hd'")
+     atmw_1hd <- NA
    }
    
    atmw_1hd  <-  (mtwp_1hd/nmtp_1hd)*1000 

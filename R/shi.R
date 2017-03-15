@@ -21,7 +21,7 @@ shi <- function(noph,nops){
 #       if (missing(nops)){
 #         stop("Please enter the Number of Tubers Planted 'ntp'")
 #       }
-        if(sum(nops)==0){shi <- NA}
+        if(sum(nops,na.rm = TRUE)==0){shi <- NA}
         else{
         shi  <- (noph/nops)*100
         }

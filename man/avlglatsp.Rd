@@ -4,20 +4,10 @@
 \alias{avlglatsp}
 \title{Function for calculating the Average Length of lateral sprout (AVLGLATSP)}
 \usage{
-avlglatsp(lglatsp1, lglatsp2, lglatsp3, lglatsp4, lglatsp5, lglatsp6)
+avlglatsp(...)
 }
 \arguments{
-\item{lglatsp1}{Length of the lateral sprout Number 1}
-
-\item{lglatsp2}{Length of the lateral sprout Number 2}
-
-\item{lglatsp3}{Length of the lateral sprout Number 3}
-
-\item{lglatsp4}{Length of the lateral sprout Number 4}
-
-\item{lglatsp5}{Length of the lateral sprout Number 5}
-
-\item{lglatsp6}{Length of the lateral sprout Number 6}
+\item{...}{Length of the lateral sprout}
 }
 \value{
 avlgatsp

@@ -15,10 +15,12 @@
 tntpl <- function(tntp,nph){
   
   if (missing(tntp)){
-    stop("Please enter the Total Number of tubers/plot 'tntp'")
+    #stop("Please enter the Total Number of tubers/plot 'tntp'")
+    tntpl <- NA
   }
   if (missing(nph)){
-    stop("Please enter Number of plants harvested 'nph'")
+    #stop("Please enter Number of plants harvested 'nph'")
+    tntpl <- NA
   }
   tntpl <- tntp/nph
   return(tntpl)

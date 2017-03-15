@@ -45,12 +45,13 @@ scriteria_phase <- function (phase, data) {
   #SCORE_WOMEN <- NULL
   #SCORE_GLOBAL <- NULL
   
+  
   fieldbook <- mutate(fieldbook, 
                         PCT_MEN = round(100*SCORE_MEN/sum(SCORE_MEN,na.rm = TRUE) , 2)
   )
     
   fieldbook <- mutate(fieldbook, 
-                        PCT_WOMAN = round(100*SCORE_WOMEN/sum(SCORE_WOMEN, na.rm = TRUE), 2)
+                        PCT_WOMEN = round(100*SCORE_WOMEN/sum(SCORE_WOMEN, na.rm = TRUE), 2)
   )
   
   fieldbook <- mutate(fieldbook, 
@@ -188,89 +189,104 @@ calculate_form_harvest <- function(data, plot_size=NA, plant_den=NA){
                         PPH 	= pph(nph = NPH, ntp = NTP))	
     }		  
   
-    if(length(fieldbook$NMTP)>0 & length(fieldbook$NPH)>0  ) {  
-    
+    #if(length(fieldbook$NMTP)>0 & length(fieldbook$NPH)>0  ) {  
+   if(is_contained("NMTP","NPH", set = fb_names)) {   
       fieldbook <- mutate(fieldbook, 
                         NMTPL	= nmtpl(nmtp =  NMTP, nph = NPH))
     }		
     
-    if(length(fieldbook$NMTP)>0 & length(fieldbook$NNoMTP)>0 ) {  
-      
-      fieldbook <- mutate(fieldbook, 
-                          TNTP = tntp(nmtp = NMTP, nnomtp = NNoMTP))
-    }
-    
-    if(length(fieldbook$NMTP)>0){  
+    #if(length(fieldbook$NMTP)>0){  
+   if(is_contained("NMTP", set = fb_names)) { 
       fieldbook <- mutate(fieldbook, 
                           TNTP = tntp(nmtp = NMTP))
     }
     
-    if(length(fieldbook$NNoMTP)>0 ) {  
+    #if(length(fieldbook$NNoMTP)>0 ) {  
+    if(is_contained("NNoMTP", set = fb_names)) { 
       fieldbook <- mutate(fieldbook, 
                           TNTP = tntp(nnomtp =  NNoMTP))
     }
+   
+   
+   #if(length(fieldbook$NMTP)>0 & length(fieldbook$NNoMTP)>0 ) {  
+   if(is_contained("NMTP", "NNoMTP", set = fb_names)) { 
+     
+     fieldbook <- mutate(fieldbook, 
+                         TNTP = tntp(nmtp = NMTP, nnomtp = NNoMTP))
+   }
+   
     
-    if(length(fieldbook$TNTP)>0 & length(fieldbook$NPH)>0){  
-      
+    #if(length(fieldbook$TNTP)>0 & length(fieldbook$NPH)>0){  
+   if(is_contained("TNTP", "NPH", set = fb_names)) {  
+     
       fieldbook <- mutate(fieldbook, 
                           TNTPL = tntpl(tntp = TNTP,nph = NPH))
     }	
    
-    if(length(fieldbook$NoMTWP)>0 ) {  
+    #if(length(fieldbook$NoMTWP)>0 ) {  
+   if(is_contained("NoMTWP", set = fb_names)) {  
         fieldbook <- mutate(fieldbook, 
                             TTWP = ttwp(nomtwp = NoMTWP))
     }
       
-    if(length(fieldbook$MTWP)>0 ) {  
+    #if(length(fieldbook$MTWP)>0 ) {  
+   if(is_contained("MTWP", set = fb_names)) {  
         
         fieldbook <- mutate(fieldbook, 
                             TTWP = ttwp(mtwp = MTWP))
     }
    
-    if(length(fieldbook$MTWP)>0 & length(fieldbook$NoMTWP)>0 ) {  
+    #if(length(fieldbook$MTWP)>0 & length(fieldbook$NoMTWP)>0 ) {  
+   if(is_contained("MTWP", "NoMTWP", set = fb_names)) {  
       
       fieldbook <- mutate(fieldbook, 
                           TTWP = ttwp(mtwp = MTWP,nomtwp = NoMTWP))
     }
  
-    if(length(fieldbook$TTWP)>0 & length(fieldbook$NPH)>0 ) {  
-      
+    #if(length(fieldbook$TTWP)>0 & length(fieldbook$NPH)>0 ) {  
+   if(is_contained("TTWP", "NPH", set = fb_names)) {    
+    
       fieldbook <- mutate(fieldbook, 
                           TTWPL	= ttwpl(ttwp = TTWP,nph = NPH))	
     }	
     
-    if(length(fieldbook$TTWP)>0) {  
-      	
+    #if(length(fieldbook$TTWP)>0) {  
+   if(is_contained("TTWP", set = fb_names)) {      
+    	
       fieldbook <- mutate(fieldbook, 
                           TTYNA = ttyna(ttwp = TTWP, pls = plot_size))
     }
  
-    if(length(fieldbook$TTWPL)>0  ) {  
+    #if(length(fieldbook$TTWPL)>0  ) {  
+   if(is_contained("TTWPL", set = fb_names)) {  
       #TTYA	= (TTWPL*plant.den)/1000}) # GTDM-45 for m&b	1
       fieldbook <- mutate(fieldbook, 
                           TTYA	= ttya(ttwpl = TTWPL, plantden = plant_den))
     }
     
-    if(length(fieldbook$MTWP)>0 & length(fieldbook$NPH)>0 ) {  
-      
+    #if(length(fieldbook$MTWP)>0 & length(fieldbook$NPH)>0 ) {  
+   if(is_contained("MTWP", "NPH", set = fb_names)) {    
       fieldbook <- mutate(fieldbook, 
                           MTWPL = mtwpl(mtwp = MTWP, nph = NPH))
     } 
 
-    if(length(fieldbook$MTWP)>0 ) {  
+    #if(length(fieldbook$MTWP)>0 ) {  
+   if(is_contained("MTWP", set = fb_names)) {    
       #MTYNA	= (MTWP/plot.size)*10
       fieldbook <- mutate(fieldbook, 
                           MTYNA = mtyna(mtwp = MTWP, pls = plot_size))
     
     }	#GTDM-39	
     
-    if(length(fieldbook$MTWPL)>0) {  
+    #if(length(fieldbook$MTWPL)>0) {  
+   if(is_contained("MTWPL", set = fb_names)) {    
       #MTYA	= (MTWPL*plant.den)/1000
       fieldbook <- mutate(fieldbook, 
                           MTYA = mtya(mtwpl = MTWPL, plantden = plant_den))
     }#GTDM-39		  
     
-    if(length(fieldbook$TTWP)>0 & length(fieldbook$TNTP)>0) {  
+    #if(length(fieldbook$TTWP)>0 & length(fieldbook$TNTP)>0) {  
+    if(is_contained("TTWP", "TNTP", set = fb_names)) {    
       #ATW		= (TTWP/TNTP)*1000
       fieldbook <- mutate(fieldbook, 
                           ATW = atw(ttwp = TTWP, tntp = TNTP))
@@ -332,13 +348,13 @@ calculate_form_postharvest <- function(data){
     
     if(is_contained("SCORE_MEN", set = fb_names)) {  
       fieldbook <- mutate(fieldbook, 
-                          SCORE_GLOBAL = sglo(sm = SCORE_MEN,sw = NULL))
+                          SCORE_GLOBAL = sglo(sm = SCORE_MEN, sw = NULL))
     }
     
     
     if(is_contained("SCORE_WOMEN", set = fb_names)) {  
       fieldbook <- mutate(fieldbook, 
-                          SCORE_GLOBAL  = sglo(sm = NULL,sw = SCORE_WOMEN))
+                          SCORE_GLOBAL  = sglo(sm = NULL, sw = SCORE_WOMEN))
     }
     
     if(is_contained("SCORE_MEN", "SCORE_WOMEN", set = fb_names)) {  
@@ -346,8 +362,23 @@ calculate_form_postharvest <- function(data){
                           SCORE_GLOBAL  = sglo(sm = SCORE_MEN, sw = SCORE_WOMEN))
      }
     
-    fieldbook
+    if(is_contained("SCORE_MEN", set = fb_names)) {  
+      fieldbook <- mutate(fieldbook, 
+                        PCT_MEN = round(100*SCORE_MEN/sum(SCORE_MEN, na.rm = TRUE) , 2))
+    }
+    
+    if(is_contained("SCORE_WOMEN", set = fb_names)) {  
+      fieldbook <- mutate(fieldbook, 
+                          PCT_WOMEN = round(100*SCORE_WOMEN/sum(SCORE_WOMEN, na.rm = TRUE), 2))
+    }
+    
+    if(is_contained("SCORE_GLOBAL", set = fb_names)) {  
+      fieldbook <- mutate(fieldbook, 
+                            PCT_GLOBAL = round(100*SCORE_GLOBAL/sum(SCORE_GLOBAL, na.rm = TRUE), 2) )
+    }
 
+    fieldbook
+    return(fieldbook)
 }
 
 

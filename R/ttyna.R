@@ -14,10 +14,12 @@
 ttyna <- function(ttwp,pls){
   
   if (missing(ttwp)){
-    stop("Please enter the Total tuber weight/plot 'ttwp'")
+    #stop("Please enter the Total tuber weight/plot 'ttwp'")
+    ttyna <- NA
   }
   if (missing(pls)){
-    stop("Please enter the net plot size ")
+    #stop("Please enter the net plot size ")
+    ttyna <- NA
   }
   ttyna <- (ttwp/pls)*10
   return(ttyna)
