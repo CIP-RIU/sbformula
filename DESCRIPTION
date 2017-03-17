@@ -15,8 +15,7 @@ Imports:
     stringr,
     date,
     dplyr,
-    car,
-    traittools
+    car
 License: MIT + file LICENSE
 Copyright: International Potato Center (2015)
 LazyData: true
@@ -25,3 +24,5 @@ Suggests:
     testthat
 VignetteBuilder: knitr
 RoxygenNote: 5.0.1
+
+
