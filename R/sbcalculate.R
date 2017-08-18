@@ -239,11 +239,14 @@ sbcalculate <- function(fb,plot.size=NA,plant.den=NA){
     AVDM <- sbformula::avdm(dm1 = DM2)
   })
   
+  ##
   #if(length(fb$DM1)>0 & length(fb$DM2)>0) fb=within(fb,{	
   if(is_contained("DM1", "DM2",set = fb_names)) fb=within(fb,{
     AVDM <- sbformula::avdm(dm1 = DM1,dm2 = DM2)
   })
-  ##
+  
+  
+  
   
   #if(length(fb$TWA)>0 & length(fb$TWA)>0 & length(fb$TWW)>0) fb=within(fb,{  
   if(is_contained("TWA", "TWW",set = fb_names)) fb=within(fb,{
@@ -489,7 +492,187 @@ sbcalculate <- function(fb,plot.size=NA,plant.den=NA){
     CTD= apply(cbind(Ta,-Tc_EV2),1,sbsum)
   })
   
+  
+  #Biochemichal traits
+  
+  if(is_contained("FeDW",	"DM", set = fb_names)) fb=within(fb,{
+    
+    FeFW <-  biochem_cont(FeDW,DM)
+  })
+    
+  if(is_contained("MnDW",	"DM", set = fb_names)) fb=within(fb,{
+    
+    MnFW <- biochem_cont(MnDW,DM)
+  })
+    
+  if(is_contained("BDW",	"DM", set = fb_names)) fb=within(fb,{
+    BFW <- biochem_cont(BDW,DM)
+  }) 
+    
+  if(is_contained("CuDW",	"DM", set = fb_names)) fb=within(fb,{
+          
+    CuFW <- biochem_cont(CuDW,DM)
+  })
+    
+    
+  if(is_contained("ZnDW",	"DM", set = fb_names)) fb=within(fb,{
+            
+    ZnFW <- biochem_cont(ZnDW,DM)
+  })
+    
+    
+  if(is_contained("CaDW",	"DM", set = fb_names)) fb=within(fb,{
+              
+    CaFW <- biochem_cont(CaDW,DM)
+  })
+    
+    
+  if(is_contained("MgDW",	"DM", set = fb_names)) fb=within(fb,{
+                
+    MgFW <- biochem_cont(MgDW,DM)
+  })
+    
+    
+  if(is_contained("KDW",	"DM", set = fb_names)) fb=within(fb,{
+                  
+    KFW <- biochem_cont(KDW,DM)
+  })
+    
+    
+  if(is_contained("PDW",	"DM", set = fb_names)) fb=within(fb,{
+                    
+    PFW <- biochem_cont(PDW,DM)
+  })
+    
+  if(is_contained("SDW_MIN",	"DM", set = fb_names)) fb=within(fb,{
+                      
+    SFW_MIN <- biochem_cont(SDW_MIN,DM)
+  })
+    
+  if(is_contained("NaDW",	"DM", set = fb_names)) fb=within(fb,{
+                        
+    NaFW <- biochem_cont(NaDW,DM)
+  })
+    
+    
+  if(is_contained("AlDW",	"DM", set = fb_names)) fb=within(fb,{
+                          
+    AlFW <- biochem_cont(AlDW,DM)
+  })
+    
+    
+  if(is_contained("TiDW",	"DM", set = fb_names)) fb=within(fb,{
+                            
+    TiFW <- biochem_cont(TiDW,DM)
+  })
+    
+    
+  if(is_contained("CrDW",	"DM", set = fb_names)) fb=within(fb,{
+                              
+    CrFW <- biochem_cont(CrDW,DM)
+  })
+    
+    
+  if(is_contained("SeDW",	"DM", set = fb_names)) fb=within(fb,{
+                                
+    SeFW <-biochem_cont(SeDW,DM)
+  })
+    
+    
+  if(is_contained("PbDW",	"DM", set = fb_names)) fb=within(fb,{
+                                  
+    PbFW <-biochem_cont(PbDW,DM)
+    })
+  
+  if(is_contained("CdDW",	"DM", set = fb_names)) fb=within(fb,{
+                                    
+    CdFW <-biochem_cont(CdDW,DM)
+  })
+    
+    
+  if(is_contained("MoDW",	"DM", set = fb_names)) fb=within(fb,{
+                                      
+    MoFW <-biochem_cont(MoDW,DM)
+    })
+                                     
+  if(is_contained("CoDW",	"DM", set = fb_names)) fb=within(fb,{
+                                        
+    CoFW <- biochem_cont(CoDW,DM)
+    })
+                                        
+  if(is_contained("NiDW",	"DM", set = fb_names)) fb=within(fb,{
+                                          
+    NiFW <-biochem_cont(NiDW,DM)
+    })
+                                          
+  if(is_contained("ASC_FW",	"DM", set = fb_names)) fb=within(fb,{
+                                            
+    ASC_DW <-biochem_cont(ASC_FW,DM)
+    })
+                                            
+  if(is_contained("ANTHOFW",	"DM", set = fb_names)) fb=within(fb,{
+                                              
+    ANTHODW <- biochem_cont(ANTHOFW,DM)
+    })
+                                              
+  if(is_contained("CafAc_FW",	"DM", set = fb_names)) fb=within(fb,{
+                                                
+    CafAc_DW <-biochem_cont(CafAc_FW, DM)
+    })
+                                               
+  if(is_contained("Trip_FW",	"DM", set = fb_names)) fb=within(fb,{
+                                                  
+    Trip_DW <-biochem_cont(Trip_FW,DM)
+    })
+                                      
+  if(is_contained("AntCap_FW",	"DM", set = fb_names)) fb=within(fb,{
+                                                    
+    AntCap_DW <-biochem_cont(AntCap_FW, DM) 
+    })
+         
+  if(is_contained("TA_FW",	"DM", set = fb_names)) fb=within(fb,{
+                                                      
+    TA_DW <-biochem_cont(TA_FW, DM)
+    })
+                                                      
+  if(is_contained("VioFW",	"DM", set = fb_names)) fb=within(fb,{
+                                                        
+    VioFW <-biochem_cont(VioFW,DM) 
+    })
+                                                        
+  if(is_contained("AntFW",	"DM", set = fb_names)) fb=within(fb,{
+                                                          
+    AntFW <- biochem_cont(AntFW,DM)
+    } )
+                                                          
+  if(is_contained("LuteFW",	"DM", set = fb_names)) fb=within(fb,{
+                                                            
+    LuteFW <-biochem_cont(LuteFW,DM)
+    })
+                                                           
+  if(is_contained("ZeaFW",	"DM", set = fb_names)) fb=within(fb,{
+                                                              
+    ZeaFW <-biochem_cont(ZeaFW,DM) 
+    })
+                                                             
+  if(is_contained("BetacaroFW",	"DM", set = fb_names)) fb=within(fb,{
+                                                                
+    BetacaroDW <-biochem_cont(BetacaroFW,DM)
+    })
+                                                               
+  if(is_contained("NeoFW",	"DM", set = fb_names)) fb=within(fb,{
+                                                                  
+    NeoDW <-biochem_cont(NeoFW,DM) 
+    })
+                                                                  
+  if(is_contained("CaroFW",	"DM", set = fb_names)) fb=within(fb,{
+                                                                    
+    CaroDW <-biochem_cont(CaroFW,DM)
+  })
 
+
+  
+  
   
   ###############################################################################
   # SWEETPOTATO VARIABLES ---------------------------------------------------
@@ -506,68 +689,69 @@ sbcalculate <- function(fb,plot.size=NA,plant.den=NA){
   
   #if(length(fb$CRW)>0 & length(fb$NCRW)>0) fb=within(fb,{	
   if(is_contained("CRW", "NCRW", "RYTHA", set = fb_names))  fb=within(fb,{	
-    RYTHA	= apply(cbind(CRW, NCRW), 1, sum, na.rm=T)*10/plot.size #this formulas is pending
+    #RYTHA	= apply(cbind(CRW, NCRW), 1, sum, na.rm=T)*10/plot.size #this formulas is pending
+    RYTHA <- sbformula::rytha(crw = CRW, ncrw = NCRW, pls = plot.size)
   })
   
   #if(length(fb$CRW)>0 & length(fb$NOCR)>0) fb=within(fb,{	
   if(is_contained("CRW", "NOCR", "ACRW", set = fb_names))  fb=within(fb,{	
-    ACRW	= sbformula::acrw(crw = CRW, nocr = NOCR)
+    ACRW	<-  sbformula::acrw(crw = CRW, nocr = NOCR)
   })
   
   
   if(is_contained("NONC", "NOCR", "TNRPLOT" ,set = fb_names))  fb=within(fb,{	
-    TNRPLOT	= sbformula::tnrplot(nonc = NONC, nocr = NOCR)
+    TNRPLOT	 <-  sbformula::tnrplot(nonc = NONC, nocr = NOCR)
   })
   
   
   #if(length(fb$NOCR)>0 & length(fb$NONC)>0 & length(fb$NOPH)>0) fb=within(fb,{	
   if(is_contained("NONC", "NOCR", "NOPH", "NRPP",set = fb_names))  fb=within(fb,{	
-    NRPP	= sbformula::nrpp(nonc = NONC, nocr = NOCR, noph = NOPH)
+    NRPP <-  sbformula::nrpp(nonc = NONC, nocr = NOCR, noph = NOPH)
   })
   
 
   #if(length(fb$CRW)>0 & length(fb$NCRW)>0 & length(fb$NOPH)>0) fb=within(fb,{	
   if(is_contained("CRW", "NCRW", "NOPH", "YPP", set = fb_names))  fb=within(fb,{	
-    YPP	= sbformula::ypp(crw = CRW, ncrw = NCRW, noph = NOPH)
+    YPP <- sbformula::ypp(crw = CRW, ncrw = NCRW, noph = NOPH)
   })
   
   #if(length(fb$NOCR)>0 & length(fb$NONC)>0) fb=within(fb,{	
   if(is_contained("NCRW", "NONC","CI", set = fb_names))  fb=within(fb,{	
-    CI	= sbformula::ci(nocr = NOCR, nonc = NONC)
+    CI <- sbformula::ci(nocr = NOCR, nonc = NONC)
   })
   
   #if(length(fb$CRW)>0 & length(fb$NCRW)>0 & length(fb$VW)>0) fb=within(fb,{	
   if(is_contained("CRW", "NCRW", "VW", "HI", set = fb_names))  fb=within(fb,{
-    HI	= sbformula::hi(crw = CRW, ncrw = NCRW, vw = VW)
+    HI	<- sbformula::hi(crw = CRW, ncrw = NCRW, vw = VW)
   })
   
   #if(length(fb$NOPH)>0 & length(fb$NOPS)>0) fb=within(fb,{	
   if(is_contained("NOPH", "NOPS", "SHI",set = fb_names))  fb=within(fb,{ 
-    SHI	= sbformula::shi(noph = NOPH, nops = NOPS)
+    SHI	<- sbformula::shi(noph = NOPH, nops = NOPS)
   })
   
   #if(length(fb$CRW)>0 & length(fb$NCRW)>0 & length(fb$VW)>0) fb=within(fb,{	
   if(is_contained("CRW", "NCRW", "VW", "BIOM",set = fb_names))  fb=within(fb,{ 
-    BIOM	= sbformula::biom(crw = CRW, ncrw = NCRW, vw = VW, pls = plot.size)
+    BIOM	<- sbformula::biom(crw = CRW, ncrw = NCRW, vw = VW, pls = plot.size)
   })
   
   if(is_contained("VW", "FYTHA", set = fb_names))  fb=within(fb,{ 
-    FYTHA	= sbformula::fytha(vw = VW, pls = plot.size)
+    FYTHA	<- sbformula::fytha(vw = VW, pls = plot.size)
   })
   
   #if(length(fb$DMD)>0 & length(fb$DMF)>0) fb=within(fb,{	
   if(is_contained("DMD", "DMF", "DM" ,set = fb_names))  fb=within(fb,{ 
-    DM	= sbformula::dm(dmd = DMD, dmf = DMF)
+    DM	<- sbformula::dm(dmd = DMD, dmf = DMF)
   })
   
   #if(length(fb$VW)>0 & length(fb$DMVD)>0 & length(fb$DMVF)>0) fb=within(fb,{	
   if(is_contained("VW", "DMVD", "DMVF", "DMFY", set = fb_names))  fb=within(fb,{ 
-    DMFY	= sbformula::dmfy(vw = VW, dmvd = DMVD, dmvf = DMVF, pls = plot.size)
+    DMFY	<- sbformula::dmfy(vw = VW, dmvd = DMVD, dmvf = DMVF, pls = plot.size)
   })
   
   #if(length(fb$DMRY)>0 & length(fb$CRW)>0 & length(fb$NCRW)>0 & length(fb$DMD)>0 & length(fb$DMF)>0) fb=within(fb,{	
   if(is_contained("CRW", "NCRW", "DMF", "DMD", "DMRY",set = fb_names))  fb=within(fb,{ 
-    DMRY	=  sbformula::dmry(crw = CRW, ncrw = NCRW, dmf = DMF, pls = plot.size, dmd = DMD)
+    DMRY	<-  sbformula::dmry(crw = CRW, ncrw = NCRW, dmf = DMF, pls = plot.size, dmd = DMD)
   })
   
   #if(length(fb$RFR)>0 & length(fb$CRW)>0 & length(fb$NCRW)>0 & length(fb$DMD)>0 & length(fb$DMF)>0 & length(fb$DMVD)>0 & length(fb$DMVF)>0) fb=within(fb,{	

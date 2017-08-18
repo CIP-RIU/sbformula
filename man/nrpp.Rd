@@ -22,9 +22,6 @@ Formula for calculating the Number of Roots per Plant (NRPP)
 \details{
 Formula for calculating the number of roots per plant
 }
-\author{
-Omar Benites, Raul Eyzaguirre
-}
 \seealso{
 Other sweetpotato,quality,harvest: \code{\link{acrw}},
   \code{\link{biom}}, \code{\link{ci}},
@@ -33,6 +30,8 @@ Other sweetpotato,quality,harvest: \code{\link{acrw}},
   \code{\link{fytha}}, \code{\link{hi}}, \code{\link{rfr}},
   \code{\link{rytha}}, \code{\link{trw}}, \code{\link{ypp}}
 }
+\author{
+Omar Benites, Raul Eyzaguirre
+}
 \keyword{agronomy,harvest,quantitative-continuous,yield}
 \keyword{sweetpotato,}
-

@@ -15,4 +15,3 @@ select the best clones according to storage characteristics, taking into account
 identified criteria. If desirable, the clones / varieties in each of the 3 farmer stores can also be
 ranked by different groups of evaluators
 }
-

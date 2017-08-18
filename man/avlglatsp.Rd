@@ -15,9 +15,6 @@ avlgatsp
 \description{
 This functions calculate the average length of lateral sprout
 }
-\author{
-Omar Benites
-}
 \references{
 Procedures for standard evaluation and data management of advanced potato clones: Assessment of Dormancy and Sprouting
 Behavior of Elite and Advanced Clones.International Potato Center (CIP).
@@ -27,4 +24,6 @@ Other Sprout-dormancy, evaluation, potato: \code{\link{avthsp}},
   \code{\link{dorpd}}, \code{\link{pw_spt}},
   \code{\link{pw_uspt}}
 }
-
+\author{
+Omar Benites
+}

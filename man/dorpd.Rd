@@ -21,9 +21,6 @@ Monitoring of sprout initiation and growth should be carried out at 10 day-inter
 \details{
 This function returns
 }
-\author{
-Omar Benites
-}
 \references{
 Procedures for standard evaluation and data management of advanced potato clones: Assessment of Dormancy and Sprouting
 Behavior of Elite and Advanced Clones.International Potato Center (CIP).
@@ -33,4 +30,6 @@ Other Sprout-dormancy, evaluation, potato: \code{\link{avlglatsp}},
   \code{\link{avthsp}}, \code{\link{pw_spt}},
   \code{\link{pw_uspt}}
 }
-
+\author{
+Omar Benites
+}

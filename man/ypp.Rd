@@ -22,9 +22,6 @@ Formula for calculating the Yield Per Plant (YPP)
 \details{
 Formula for calculating the yield per plant
 }
-\author{
-Omar Benites, Raul Eyzaguirre
-}
 \seealso{
 Other sweetpotato,quality,harvest: \code{\link{acrw}},
   \code{\link{biom}}, \code{\link{ci}},
@@ -34,6 +31,8 @@ Other sweetpotato,quality,harvest: \code{\link{acrw}},
   \code{\link{nrpp}}, \code{\link{rfr}},
   \code{\link{rytha}}, \code{\link{trw}}
 }
+\author{
+Omar Benites, Raul Eyzaguirre
+}
 \keyword{agronomy,harvest,quantitative-continuous,yield}
 \keyword{sweetpotato,}
-

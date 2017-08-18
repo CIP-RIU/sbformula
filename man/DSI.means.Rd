@@ -22,13 +22,12 @@ Function to calculate the Drought Suceptibility Index (DSI) using mean yield val
 \details{
 This function returns the drought suceptible index (DSI) using means.
 }
-\author{
-Omar Benites
-}
 \references{
 Comparison of yield based drought tolerance indices in improved varieties, genetic stocks and landraces
 of potato (Solanum tuberosum L.)
 }
+\author{
+Omar Benites
+}
 \keyword{drought}
 \keyword{index,}
-

@@ -20,9 +20,6 @@ Function for calculating  Specific Gravity Sample 2 - Third Harvest Date (SGS2_3
 \details{
 This function returns specific gravity sample 2 (Third Harvest Date)
 }
-\author{
-Omar Benites
-}
 \references{
 Protocol for tuber bulking maturity assessment of elite and advanced potato clones. International Potato Center (CIP), 2024
 }
@@ -37,4 +34,6 @@ Other Bulking-maturity, evaluation, potato: \code{\link{atmw_1hd}},
   \code{\link{sgs1_3hd}}, \code{\link{sgs2_1hd}},
   \code{\link{sgs2_2hd}}
 }
-
+\author{
+Omar Benites
+}

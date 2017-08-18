@@ -20,9 +20,6 @@ Function for calculating the percentage weight loss of unsprouted tuber (PW_USPT
 \details{
 This function calculate the percentage weight loss of unsprouted tuber
 }
-\author{
-Omar Benites
-}
 \references{
 Procedures for standard evaluation and data management of advanced potato clones: Assessment of Dormancy and Sprouting
 Behavior of Elite and Advanced Clones.International Potato Center (CIP).
@@ -32,4 +29,6 @@ Other Sprout-dormancy, evaluation, potato: \code{\link{avlglatsp}},
   \code{\link{avthsp}}, \code{\link{dorpd}},
   \code{\link{pw_spt}}
 }
-
+\author{
+Omar Benites
+}

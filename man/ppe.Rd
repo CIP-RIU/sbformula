@@ -20,13 +20,12 @@ This function allow to calculate the percentage plants emerged.
 \details{
 Formula for calculating the Percentage plants emerged
 }
-\author{
-Omar Benites
-}
 \references{
 International Potato Center (CIP).2014: Procedures for Standard Evaluation and Data Management of Advanced Potato Clones
 Module 2. Healthy Tuber Yield Trials International Cooperators Guide.
 }
+\author{
+Omar Benites
+}
 \keyword{agronomy,phenology,quantitative-continuous,percentage,any}
 \keyword{potato,}
-

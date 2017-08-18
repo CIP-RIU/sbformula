@@ -13,4 +13,3 @@ calculate_form_dormancy(data)
 To determine the dormancy period and the initiation of sprouting of advanced
 clones for its use as seed under storage conditions of diffuse light or rustic storage.
 }
-

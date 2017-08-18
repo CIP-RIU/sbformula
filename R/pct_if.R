@@ -23,7 +23,16 @@ pct_if <- function(inital_value = NA, final_value = NA){
   if(is.factor(inital_value)) sm <- as.numeric(inital_value)
   if(is.factor(final_value)) sw <- as.numeric(final_value)
   
-  pct_if <- (apply(cbind(inital_value,final_value),1,sbsum)/final_value)*100
+  if(all(is.na(final_value))) {
+      pct_if <- NA
+  } else if(all(is.na(final_value))) {
+      pct_if <- NA
+  } else {
+      pct_if <- (apply(cbind(inital_value,final_value),1,sbsum)/inital_value)*100
+  }
+  
+  
+  
   return(pct_if)
   
 } 

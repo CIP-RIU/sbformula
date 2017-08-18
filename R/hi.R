@@ -14,7 +14,7 @@ hi<- function(crw,ncrw,vw){
         if(missing(crw) && missing(ncrw) && missing(vw)){
           hi <- NA
         } else {
-          hi <- apply(cbind(crw, ncrw), 1, sbsum)/(apply(cbind(vw, crw, ncrw), 1, sbsum)*100)
+          hi <- apply(cbind(crw, ncrw), 1, sbsum)*100/(apply(cbind(vw, crw, ncrw), 1, sbsum))
         }
         return(hi)
 }

@@ -10,4 +10,3 @@ is_contained(..., set)
 Check if a header(s) correspond to the fieldbook names. It returns a TRUE if all values are contained in the set and FALSE
 if just few or neither elements are contained into the set.
 }
-

@@ -18,4 +18,3 @@ During the harvest period, agricultors and researchers make direct observations 
 yield traits in the field. This evaluation is carried out for each clone and plot (each repetition of the Mother trial / each Baby trial).
 The amount of harvested plants and the number and weight of the tubers are recorded
 }
-

@@ -20,9 +20,6 @@ Formula for calculating the Marketable tuber yield adjusted (MTYA)
 \details{
 Formula for calculating marketable tuber yield adjusted
 }
-\author{
-Omar Benites
-}
 \references{
 International Potato Center (CIP).2014: Procedures for Standard Evaluation and Data Management of Advanced Potato Clones
 Module 2. Healthy Tuber Yield Trials International Cooperators Guide.
@@ -31,7 +28,9 @@ Module 2. Healthy Tuber Yield Trials International Cooperators Guide.
 Other potato,yield,late blight,harvest,plant: \code{\link{atmw}},
   \code{\link{nmtpl}}
 }
+\author{
+Omar Benites
+}
 \keyword{agronomy,harvest,quantitative-continuous,yield,late}
 \keyword{blight,plant}
 \keyword{potato,}
-

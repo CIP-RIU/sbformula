@@ -26,9 +26,6 @@ Formula for calculating the Root Foliage Ratio (RFR)
 \details{
 Formula for calculating the root foliage ratio
 }
-\author{
-Omar Benites, Raul Eyzaguirre
-}
 \seealso{
 Other sweetpotato,quality,harvest: \code{\link{acrw}},
   \code{\link{biom}}, \code{\link{ci}},
@@ -38,6 +35,8 @@ Other sweetpotato,quality,harvest: \code{\link{acrw}},
   \code{\link{nrpp}}, \code{\link{rytha}},
   \code{\link{trw}}, \code{\link{ypp}}
 }
+\author{
+Omar Benites, Raul Eyzaguirre
+}
 \keyword{agronomy,harvest,quantitative-continuous,yield}
 \keyword{sweetpotato,}
-

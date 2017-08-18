@@ -27,4 +27,3 @@ For example:
 Each of the mentioned criteria is written on a paper bag or on a cardboard tray. In other
 words, if the farmers have identified 6 criteria, then we also have 6 bags or cardboard trays.
 }
-

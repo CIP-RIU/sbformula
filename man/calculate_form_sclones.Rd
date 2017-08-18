@@ -14,4 +14,3 @@ With the group of farmers, all of the (previously) harvested fields are visited 
 the best clones, taking into account the previously identified criteria. In the case of the Mother 
 trial, the evaluation is performed for each repetition.
 }
-

@@ -17,4 +17,3 @@ This function allows sum columns and avoid NA values at the same time
 }
 \keyword{NA's}
 \keyword{sum,}
-

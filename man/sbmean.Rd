@@ -25,12 +25,11 @@ Function to calculate the summary by mean for breeding data
 This function returns the summary by mean.
 Furthermore, this function use the doBy package.
 }
-\author{
-Omar Benites
-}
 \references{
 Some code for this function were inspired by Cookbook for R.
 }
+\author{
+Omar Benites
+}
 \keyword{stats,}
 \keyword{summary}
-

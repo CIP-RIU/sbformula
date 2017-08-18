@@ -17,7 +17,7 @@ nrpp <- function(nonc,nocr,noph){
 #         if(missing(noph)){
 #           stop("Please enter Number of plants harvested 'noph'")
 #         }
-        if(sum(noph,na.rm = TRUE)){ nrpp <- NA }
+        if(sum(noph,na.rm = TRUE)==0){ nrpp <- NA }
         else { 
         if(!missing(nocr) && missing(nonc))  {nrpp <- nocr/noph}  
         if(missing(nocr)  && !missing(nonc)) {nrpp <- nonc/noph}       

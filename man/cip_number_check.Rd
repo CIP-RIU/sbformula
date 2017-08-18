@@ -23,4 +23,3 @@ The syntax is (CIP)(1 until 6 numbers)(dot)(1 until max 3 digits)
 Omar Benites
 }
 \keyword{cipnumber,}
-

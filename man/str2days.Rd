@@ -24,4 +24,3 @@ str2days("2011-09-07") to 7Sep2011
 \author{
 Reinhard Simon
 }
-

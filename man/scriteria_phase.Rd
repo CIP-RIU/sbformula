@@ -14,4 +14,3 @@ scriteria_phase(phase, data)
 \description{
 Percentages and scores by Plant Development
 }
-

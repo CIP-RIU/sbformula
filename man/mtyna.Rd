@@ -20,13 +20,12 @@ Formula for calculating the Marketable Tuber Yield No Adjusted (MTYNA)
 \details{
 Formula for calculating the total tuber yield no adjusted
 }
-\author{
-Omar Benites
-}
 \references{
 International Potato Center (CIP).2014: Procedures for Standard Evaluation and Data Management of Advanced Potato Clones
 Module 2. Healthy Tuber Yield Trials International Cooperators Guide.
 }
+\author{
+Omar Benites
+}
 \keyword{agronomy,harvest,quantitative-continuous,plant}
 \keyword{potato,}
-

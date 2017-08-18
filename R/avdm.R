@@ -11,9 +11,17 @@
 #'@family potato,yield,late blight,post-harvest,plant
 #'@export 
 #'
-avdm <- function(dm1,dm2){
-         if(!missing(dm1) && missing(dm2) ) {avdm <- dm1}  
-         if(missing(dm1)  && !missing(dm2)) {avdm <- dm2}        
-         if(!missing(dm1) && !missing(dm2)) {avdm <- apply(cbind(dm1,dm2),1,sbsum)/2}        
+avdm <- function(dm1=NULL, dm2 = NULL){
+  
+         if(is.null(dm1) && is.null(dm2))  {avdm <- NULL}  
+         if(!is.null(dm1) && is.null(dm2))  {avdm <- dm1}  
+         if(is.null(dm1)  && !is.null(dm2)) {avdm <- dm2}  
+  
+         if(!is.null(dm1) && !is.null(dm2)) {
+           
+           res <- dplyr::data_frame(dm1,dm2)
+           avdm <- rowMeans(res, na.rm = TRUE)
+           #avdm <- apply(cbind(dm1,dm2),1,sbsum)/2
+         }        
          return(avdm)
 }

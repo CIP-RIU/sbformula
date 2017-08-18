@@ -20,9 +20,6 @@ Function for calculating Increase Relative Water Content 2 (INRWC2)
 \details{
 This function calculates the Increase Relative Water Content 2 (INRWC2)
 }
-\author{
-Omar Benites
-}
 \references{
 Assessing Potato Clone for Drought Tolerance under Field Condition
 }
@@ -36,4 +33,6 @@ Other drought, evaluation, potato: \code{\link{INChC1}},
   \code{\link{insd1}}, \code{\link{insd2}},
   \code{\link{insnpp1}}, \code{\link{insnpp2}}
 }
-
+\author{
+Omar Benites
+}

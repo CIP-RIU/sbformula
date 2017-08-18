@@ -20,14 +20,13 @@ Formula for calculating the Total tuber weight/plant (TTWPL)
 \details{
 Formula for calculating the Total tuber weight/plant
 }
-\author{
-Omar Benites
-}
 \references{
 International Potato Center (CIP).2014: Procedures for Standard Evaluation and Data Management of Advanced Potato Clones
 Module 2. Healthy Tuber Yield Trials International Cooperators Guide.
 }
+\author{
+Omar Benites
+}
 \keyword{agronomy,harvest,quantitative-continuous,yield,late}
 \keyword{blight,plot}
 \keyword{potato,}
-

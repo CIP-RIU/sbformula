@@ -16,4 +16,3 @@ if just few or neither elements are contained into the set.
 \author{
 Omar Benites
 }
-

@@ -20,9 +20,6 @@ Function for calculating the Increase Stem diameter 1 - First difference (INSD1)
 \details{
 This function calculates the Increase Stem diameter 1 - First difference
 }
-\author{
-Omar Benites
-}
 \references{
 Assessing Potato Clone for Drought Tolerance under Field Condition
 }
@@ -36,4 +33,6 @@ Other drought, evaluation, potato: \code{\link{INChC1}},
   \code{\link{inplahe3}}, \code{\link{insd2}},
   \code{\link{insnpp1}}, \code{\link{insnpp2}}
 }
-
+\author{
+Omar Benites
+}

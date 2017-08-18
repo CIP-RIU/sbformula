@@ -26,9 +26,6 @@ Formula for calculating the Dry matter root  yield (DMRY)
 \details{
 Formula for calculating dry matter root yield
 }
-\author{
-Omar Benites
-}
 \seealso{
 Other sweetpotato,quality,harvest: \code{\link{acrw}},
   \code{\link{biom}}, \code{\link{ci}},
@@ -37,6 +34,8 @@ Other sweetpotato,quality,harvest: \code{\link{acrw}},
   \code{\link{nrpp}}, \code{\link{rfr}},
   \code{\link{rytha}}, \code{\link{trw}}, \code{\link{ypp}}
 }
+\author{
+Omar Benites
+}
 \keyword{agronomy,harvest,quantitative-continuous,yield}
 \keyword{sweetpotato,}
-

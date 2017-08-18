@@ -83,4 +83,3 @@ All the variables calculated
 Progress in developing a potato ontology for breeders. Reinhard Simon, Vilma Hualla, Raul Eyzaguirre, Raul Cordova, Robert O M Mwanga, Genoveva Rossel
 Progress in developing a sweetpotato ontology for breeders. Reinhard Simon, Vilma Hualla, E. Salas, Rene Gomez, Raul Cordova, Stef de Haan
 }
-

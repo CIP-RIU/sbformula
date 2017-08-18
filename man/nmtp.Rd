@@ -22,15 +22,14 @@ Formula for calculating the Number of Marketable Tubers/Plot (NMTP)
 \details{
 Formula for calculating the Number Marketable Tubers/Plot NMTP
 }
-\author{
-Omar Benites
-}
 \references{
 International Potato Center (CIP).2014: Procedures for Standard Evaluation and Data Management of Advanced Potato Clones
 Module 2. Healthy Tuber Yield Trials International Cooperators Guide.
+}
+\author{
+Omar Benites
 }
 \keyword{agronomy,harvest,quantitative-continuous,yield,}
 \keyword{blight,plot}
 \keyword{late}
 \keyword{potato,}
-

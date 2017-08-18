@@ -20,9 +20,6 @@ Formula for calculating the Average commercial root weight (ACRW)
 \details{
 Formula for calculating the average commercial root weight
 }
-\author{
-Omar Benites
-}
 \seealso{
 Other sweetpotato,quality,harvest: \code{\link{biom}},
   \code{\link{ci}}, \code{\link{cytha}},
@@ -31,6 +28,8 @@ Other sweetpotato,quality,harvest: \code{\link{biom}},
   \code{\link{nrpp}}, \code{\link{rfr}},
   \code{\link{rytha}}, \code{\link{trw}}, \code{\link{ypp}}
 }
+\author{
+Omar Benites
+}
 \keyword{agronomy,harvest,quantitative-continuous,yield}
 \keyword{sweetpotato,}
-

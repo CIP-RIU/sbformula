@@ -26,10 +26,9 @@ sglo  <-  sglo(sdata$score_women,sdata$score_men)
 }
  
 }
-\author{
-Omar Benites
-}
 \references{
 Participatory Varietal Selection (PVS): Mother and baby trial design. International Potato Center. 2014
 }
-
+\author{
+Omar Benites
+}

@@ -20,9 +20,6 @@ Formula for calculating the Total Number of Tubers/Plant (TNTPL)
 \details{
 Formula for calculating the total number of tubers/plant
 }
-\author{
-Omar Benites
-}
 \references{
 International Potato Center (CIP).2014: Procedures for Standard Evaluation and Data Management of Advanced Potato Clones
 Module 2. Healthy Tuber Yield Trials International Cooperators Guide.
@@ -31,8 +28,10 @@ Module 2. Healthy Tuber Yield Trials International Cooperators Guide.
 Other potato,yield,late blight,harvest: \code{\link{tntp}},
   \code{\link{ttwp}}
 }
+\author{
+Omar Benites
+}
 \keyword{agronomy,harvest,quantitative-continuous,yield,}
 \keyword{blight,plant}
 \keyword{late}
 \keyword{potato,}
-

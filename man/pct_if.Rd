@@ -18,10 +18,9 @@ Return A vector with the diference with the initial and final trait values measu
 At the post-harvest stage in mother and baby trials, it tipical to measure the gain or loss values given by
 field traits.
 }
-\author{
-Omar Benites
-}
 \references{
 Participatory Varietal Selection (PVS) Mother and baby trial design. International Potato Center, 2014.
 }
-
+\author{
+Omar Benites
+}

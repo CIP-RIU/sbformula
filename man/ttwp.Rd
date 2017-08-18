@@ -24,9 +24,6 @@ Formula for Total Tuber Weight/Plot (TTWP)
 \details{
 This functions calculate Total tuber weight/plot
 }
-\author{
-Omar Benites
-}
 \references{
 International Potato Center (CIP).2014: Procedures for Standard Evaluation and Data Management of Advanced Potato Clones
 Module 2. Healthy Tuber Yield Trials International Cooperators Guide.
@@ -35,7 +32,9 @@ Module 2. Healthy Tuber Yield Trials International Cooperators Guide.
 Other potato,yield,late blight,harvest: \code{\link{tntpl}},
   \code{\link{tntp}}
 }
+\author{
+Omar Benites
+}
 \keyword{agronomy,harvest,quantitative-continuous,yield,late}
 \keyword{blight,plot}
 \keyword{potato,}
-

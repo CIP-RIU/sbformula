@@ -34,4 +34,3 @@ It returns a list of outliers.
 \author{
 Omar Benites
 }
-

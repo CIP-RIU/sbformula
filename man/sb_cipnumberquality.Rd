@@ -18,4 +18,3 @@ Return all wrong cip numbers
 This function print cipnumber which are not well-written
 }
 \keyword{cipnumber,quality}
-

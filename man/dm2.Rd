@@ -20,9 +20,6 @@ Formula for calculating the Dry Matter Content Sample 2 (DM2)
 \details{
 Formula for calculating the dry matter content sample 2
 }
-\author{
-Omar Benites
-}
 \references{
 International Potato Center (CIP).2014: Procedures for Standard Evaluation and Data Management of Advanced Potato Clones
 Module 2. Healthy Tuber Yield Trials International Cooperators Guide.
@@ -32,7 +29,9 @@ Other potato,yield,late blight,post-harvest,plant: \code{\link{aocp}},
   \code{\link{atw}}, \code{\link{avdm}}, \code{\link{dm1}},
   \code{\link{ocs1}}, \code{\link{ocs2}}, \code{\link{sg}}
 }
+\author{
+Omar Benites
+}
 \keyword{agronomy,post-harvest,quantitative-continuous,yield,late}
 \keyword{blight,plant}
 \keyword{potato,}
-

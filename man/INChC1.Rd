@@ -26,9 +26,6 @@ Function for calculating the Increase Chlorophyll Content 1 - First difference (
 \details{
 This function calculates the Increase Chlorophyll Content 1 (First difference)
 }
-\author{
-Omar Benites
-}
 \references{
 Assessing Potato Clone for Drought Tolerance under Field Condition
 }
@@ -42,4 +39,6 @@ Other drought, evaluation, potato: \code{\link{INChC2}},
   \code{\link{insd1}}, \code{\link{insd2}},
   \code{\link{insnpp1}}, \code{\link{insnpp2}}
 }
-
+\author{
+Omar Benites
+}

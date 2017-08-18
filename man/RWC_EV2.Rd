@@ -22,9 +22,6 @@ Function for calculating Relative Water Content 2 Evaluation-Second Evaluation (
 \details{
 This function calculate the relative water content 2 Evaluation-Second Evaluation
 }
-\author{
-Omar Benites
-}
 \references{
 Assessing Potato Clone for Drought Tolerance under Field Condition
 }
@@ -38,4 +35,6 @@ Other drought, evaluation, potato: \code{\link{INChC1}},
   \code{\link{insd1}}, \code{\link{insd2}},
   \code{\link{insnpp1}}, \code{\link{insnpp2}}
 }
-
+\author{
+Omar Benites
+}

@@ -22,9 +22,6 @@ Formula for calculating the Total root yield (RYTHA)
 \details{
 Formula for calculating total root yield
 }
-\author{
-Omar Benites
-}
 \seealso{
 Other sweetpotato,quality,harvest: \code{\link{acrw}},
   \code{\link{biom}}, \code{\link{ci}},
@@ -34,6 +31,8 @@ Other sweetpotato,quality,harvest: \code{\link{acrw}},
   \code{\link{nrpp}}, \code{\link{rfr}}, \code{\link{trw}},
   \code{\link{ypp}}
 }
+\author{
+Omar Benites
+}
 \keyword{agronomy,harvest,quantitative-continuous,yield,}
 \keyword{sweetpotato,}
-

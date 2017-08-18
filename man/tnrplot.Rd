@@ -28,4 +28,3 @@ Omar Benites, Raul Eyzaguirre
 \keyword{quantitative-continuous,}
 \keyword{sweetpotato,}
 \keyword{yield}
-

@@ -20,9 +20,6 @@ Function for calculating Specific Gravity - Second Harvest Date (SG_2HD)
 \details{
 This function returns the specific gravity (Second harvest date)
 }
-\author{
-Omar Benites
-}
 \references{
 Protocol for tuber bulking maturity assessment of elite and advanced potato clones. International Potato Center (CIP), 2014
 }
@@ -37,4 +34,6 @@ Other Bulking-maturity, evaluation, potato: \code{\link{atmw_1hd}},
   \code{\link{sgs2_1hd}}, \code{\link{sgs2_2hd}},
   \code{\link{sgs2_3hd}}
 }
-
+\author{
+Omar Benites
+}

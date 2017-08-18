@@ -20,9 +20,6 @@ Function for calculating the Average non-marketable tuber weight-Second harvest 
 \details{
 This function returns the average non-marketable tuber weight-Second harvest date
 }
-\author{
-Omar Benites
-}
 \references{
 Protocol for tuber bulking maturity assessment of elite and advanced potato clones. International Potato Center (CIP), 2014
 }
@@ -37,4 +34,6 @@ Other Bulking-maturity, evaluation, potato: \code{\link{atmw_1hd}},
   \code{\link{sgs2_1hd}}, \code{\link{sgs2_2hd}},
   \code{\link{sgs2_3hd}}
 }
-
+\author{
+Omar Benites
+}

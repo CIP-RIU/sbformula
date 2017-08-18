@@ -22,9 +22,6 @@ Formula for calculating the Harvest index (HI)
 \details{
 Formula for calculating harvest index
 }
-\author{
-Omar Benites
-}
 \seealso{
 Other sweetpotato,quality,harvest: \code{\link{acrw}},
   \code{\link{biom}}, \code{\link{ci}},
@@ -34,6 +31,8 @@ Other sweetpotato,quality,harvest: \code{\link{acrw}},
   \code{\link{rfr}}, \code{\link{rytha}},
   \code{\link{trw}}, \code{\link{ypp}}
 }
+\author{
+Omar Benites
+}
 \keyword{agronomy,harvest,quantitative-continuous,yield}
 \keyword{sweetpotato,}
-

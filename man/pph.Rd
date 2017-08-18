@@ -20,9 +20,6 @@ Formula to calculate the Percentage of Plants Harvested.
 \details{
 Formula to calculate the percentage of plants harvested
 }
-\author{
-Omar Benites
-}
 \references{
 International Potato Center (CIP).2014: Procedures for Standard Evaluation and Data Management of Advanced Potato Clones
 Module 2. Healthy Tuber Yield Trials International Cooperators Guide.
@@ -30,8 +27,10 @@ Module 2. Healthy Tuber Yield Trials International Cooperators Guide.
 \seealso{
 Other potato,Yield; Late Blight: \code{\link{shi}}
 }
+\author{
+Omar Benites
+}
 \keyword{Blight}
 \keyword{Late}
 \keyword{agronomy,harvest,quantitative-continuous,percentage,Yield;}
 \keyword{potato,}
-

@@ -20,9 +20,6 @@ Function for calculating the Increase Stem number/plant 1 (INSNPP1)
 \details{
 This function calculates the Increase Stem number/plant 1
 }
-\author{
-Omar Benites
-}
 \references{
 Assessing Potato Clone for Drought Tolerance under Field Condition
 }
@@ -36,4 +33,6 @@ Other drought, evaluation, potato: \code{\link{INChC1}},
   \code{\link{inplahe3}}, \code{\link{insd1}},
   \code{\link{insd2}}, \code{\link{insnpp2}}
 }
-
+\author{
+Omar Benites
+}

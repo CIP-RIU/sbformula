@@ -20,9 +20,6 @@ Function for calculating the Increase Plant height 3 (INPLAHE3)
 \details{
 This function calculates the increase plant height 3 (Third difference)
 }
-\author{
-Omar Benites
-}
 \references{
 Assessing Potato Clone for Drought Tolerance under Field Condition
 }
@@ -36,4 +33,6 @@ Other drought, evaluation, potato: \code{\link{INChC1}},
   \code{\link{insd1}}, \code{\link{insd2}},
   \code{\link{insnpp1}}, \code{\link{insnpp2}}
 }
-
+\author{
+Omar Benites
+}

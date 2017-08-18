@@ -20,9 +20,6 @@ Measure should be  performed in at most three sprouts per tuber in multiple spro
 \details{
 This function calculates the average sprout thickness
 }
-\author{
-Omar Benites
-}
 \references{
 Procedures for standard evaluation and data management of advanced potato clones: Assessment of Dormancy and Sprouting
 Behavior of Elite and Advanced Clones.International Potato Center (CIP).
@@ -32,4 +29,6 @@ Other Sprout-dormancy, evaluation, potato: \code{\link{avlglatsp}},
   \code{\link{dorpd}}, \code{\link{pw_spt}},
   \code{\link{pw_uspt}}
 }
-
+\author{
+Omar Benites
+}

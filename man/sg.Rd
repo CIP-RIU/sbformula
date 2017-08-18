@@ -20,9 +20,6 @@ Formula for calculating the Specific gravity (SG)
 \details{
 Formula for calculating the specific gravity
 }
-\author{
-Omar Benites
-}
 \references{
 International Potato Center (CIP).2014: Procedures for Standard Evaluation and Data Management of Advanced Potato Clones
 Module 2. Healthy Tuber Yield Trials International Cooperators Guide.
@@ -32,7 +29,9 @@ Other potato,yield,late blight,post-harvest,plant: \code{\link{aocp}},
   \code{\link{atw}}, \code{\link{avdm}}, \code{\link{dm1}},
   \code{\link{dm2}}, \code{\link{ocs1}}, \code{\link{ocs2}}
 }
+\author{
+Omar Benites
+}
 \keyword{agronomy,post-harvest,quantitative-continuous,yield,late}
 \keyword{blight,plant}
 \keyword{potato,}
-

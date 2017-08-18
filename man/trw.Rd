@@ -20,9 +20,6 @@ Formula for calculating the Total Root Weight (TRW)
 \details{
 Formula for calculating the total root weight
 }
-\author{
-Omar Benites
-}
 \seealso{
 Other sweetpotato,quality,harvest: \code{\link{acrw}},
   \code{\link{biom}}, \code{\link{ci}},
@@ -32,6 +29,8 @@ Other sweetpotato,quality,harvest: \code{\link{acrw}},
   \code{\link{nrpp}}, \code{\link{rfr}},
   \code{\link{rytha}}, \code{\link{ypp}}
 }
+\author{
+Omar Benites
+}
 \keyword{agronomy,harvest,quantitative-continuous,yield,}
 \keyword{sweetpotato,}
-

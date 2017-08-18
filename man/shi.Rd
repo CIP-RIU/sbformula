@@ -20,14 +20,13 @@ Formula for calculating the Harvest sowing index - Survival (SHI)
 \details{
 Formula for calculating the harvest sowing index - Survival
 }
-\author{
-Omar Benites, Raul Eyzaguirre
-}
 \seealso{
 Other potato,Yield; Late Blight: \code{\link{pph}}
+}
+\author{
+Omar Benites, Raul Eyzaguirre
 }
 \keyword{Blight}
 \keyword{Late}
 \keyword{agronomy,harvest,quantitative-continuous,percentage,Yield;}
 \keyword{potato,}
-

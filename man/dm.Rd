@@ -20,9 +20,6 @@ Formula for calculating the Percentage of Storage Root Dry Matter Content (DM)
 \details{
 Formula for calculating the percentage of storage root dry matter content
 }
-\author{
-Omar Benites
-}
 \seealso{
 Other sweetpotato,quality,harvest: \code{\link{acrw}},
   \code{\link{biom}}, \code{\link{ci}},
@@ -31,6 +28,8 @@ Other sweetpotato,quality,harvest: \code{\link{acrw}},
   \code{\link{hi}}, \code{\link{nrpp}}, \code{\link{rfr}},
   \code{\link{rytha}}, \code{\link{trw}}, \code{\link{ypp}}
 }
+\author{
+Omar Benites
+}
 \keyword{agronomy,harvest,quantitative-continuous,yield}
 \keyword{sweetpotato,}
-
